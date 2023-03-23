@@ -1,13 +1,16 @@
+import React from 'react';
+import './App.scss';
 
-import './App.css';
-import Main from './components/Main/Main';
-import Navbar from './components/Navbar/Navbar';
-
-const App = () => {
+function App() {
   return (
     <div className="App">
-          <Navbar />
-          <Main/>
+      <header className="App-header">
+        
+        <p>
+         Hello gydra
+        </p>
+       
+      </header>
     </div>
   );
 }
