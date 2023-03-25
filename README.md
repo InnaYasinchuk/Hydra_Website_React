@@ -1,4 +1,4 @@
-Нosting on the page https://tubular-panda-1e00c3.netlify.app/
+Нosting on the page https://gydra-virtual-reality.netlify.app/
 
 
 
