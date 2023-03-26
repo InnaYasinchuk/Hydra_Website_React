@@ -1,4 +1,4 @@
-Нosting on the page https://gydra-virtual-reality.netlify.app/
+Website is hosted at https://gydra-virtual-reality.netlify.app/
 
 
 
