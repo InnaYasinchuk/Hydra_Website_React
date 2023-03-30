@@ -17,6 +17,7 @@ module.exports = {
   devServer: {
     watchFiles: path.resolve(__dirname, 'src'),
     port: 3000,
+    historyApiFallback: true,
   },
   plugins: [
     new HTMLWebpackPlugin({
@@ -43,7 +44,7 @@ module.exports = {
         },
         exclude: /node_modules/,
       },
-      { test: /\.(jpg|jpeg|png|svg|gif)$/, use: ['file-loader'] },
+      { test: /\.(jpg|jpeg|png|svg|gif|webp)$/, use: ['file-loader'] },
     ],
   },
   optimization: {

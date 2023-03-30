@@ -1,0 +1,21 @@
+.Navbar {
+  display: flex;
+}
+
+.nav {
+  display: flex;
+  min-width: 400px;
+  margin: 50px auto;
+  justify-content: space-between;
+}
+
+a {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FFFFFF;
+}
+
+.navbar-menu__link__active {
+  color: red;
+}
