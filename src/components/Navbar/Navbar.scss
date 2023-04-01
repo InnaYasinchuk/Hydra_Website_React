@@ -1,23 +1,23 @@
-.container {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 50px 84px;
-}
+@import "../../_mixins";
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 25px 20px;
 
   .header-logo {
     display: flex;
     align-items: center;
+    margin-right: 30px;
 
     &__item-img {
-      margin-right: 11.7px;
+      margin-right: 9px;
     }
     &__item {
-      margin-left: 3.3px;
+      margin-left: 2px;
     }
   }
 
@@ -25,56 +25,247 @@
     .header-menu-list {
       list-style: none;
       display: flex;
-      
+      flex-direction: column;
       gap: 42px;
-      justify-content: space-between;
-      
+      justify-content: center;
+      position: fixed;
+     width: 100%;
+      top: 0;
+      bottom: 0;
+      left: -100%;
+      right: 0;
+      z-index: 5;
+      transition: left 1s;
+
       .header-menu__link {
         display: block;
         text-transform: uppercase;
         text-decoration: none;
         font-weight: 700;
-        font-size: 12px;
+        font-size: 15px;
         line-height: 15px;
         color: #ffffff;
-        &:hover{
-          text-decoration: underline ;
+        &:hover {
+          text-decoration: underline;
         }
       }
-      
       .header-menu__link__active {
         display: block;
         text-transform: uppercase;
         font-weight: 700;
-        font-size: 12px;
+        font-size: 15px;
         line-height: 15px;
-        color: #C0B7E8;
+        color: #c0b7e8;
         text-decoration: none;
       }
+      
+    }
+    .header-menu-list_active {
+      
+      display: flex;
+      flex-direction: column;
+      gap: 42px;
+      justify-content: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transition: left 1s;
+
+        .header-menu__link {
+        display: block;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 15px;
+        color: #ffffff;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      .header-menu__link__active {
+        display: block;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 15px;
+        color: #c0b7e8;
+        text-decoration: none;
+      }
+      }
+  }
+
+  .navbar-button {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
+    width: 33px;
+    height: 26px;
+    position: relative;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    & span,
+    &::before,
+    &::after {
+      content: "";
+      right: 0;
+      position: absolute;
+      height: 3.7px;
+      background: linear-gradient(90deg, #c0b7e8 -11.84%, #8176af 100%);
+      border-radius: 40px;
+    }
+
+    &::before {
+      width: 100%;
+      top: 0;
+      transition-duration: 0.2s;
+    }
+
+    &::after {
+      width: 100%;
+      bottom: 0;
+      transition-duration: 0.2s;
+    }
+
+    & span {
+      width: 73%;
+      top: calc(50% - 1px);
     }
   }
+
+  .burger-menu_open {
+    display: block;
+    width: 33px;
+    height: 26px;
+    position: relative;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    & span,
+    &::before,
+    &::after {
+      content: "";
+      right: 0;
+      position: absolute;
+      height: 3.7px;
+      background: linear-gradient(90deg, #c0b7e8 -11.84%, #8176af 100%);
+      border-radius: 40px;
+    }
+
+    &::before {
+      width: 100%;
+      top: calc(50% - 1.85px);
+      transform: rotate(-45deg);
+      transition-duration: 0.2s;
+    }
+
+    &::after {
+      width: 100%;
+      top: calc(50% - 1.85px);
+      transform: rotate(45deg);
+      transition-duration: 0.2s;
+    }
+
+    & span {
+      width: 0;
+    }
+  }
+}
+
+@include desktop() {
+  .header {
+    padding: 50px 84px;
+  
+
+  .header-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+
+    &__item-img {
+      margin-right: 11.7px;
+    }
+    &__item {
+      margin-left: 3.3px;
+    }}
+  
+    .header-menu {
+      
+      .header-menu-list {
+        width: auto;
+        height: auto;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        gap: 42px;
+        justify-content: space-between;
+        top: auto;
+      bottom:auto;
+      left: auto;
+      right: auto;
+      width: auto;
+      position: static;
+      transition: none;
+            
+        .header-menu__link {
+          display: block;
+          text-transform: uppercase;
+          text-decoration: none;
+          font-weight: 700;
+          font-size: 12px;
+          line-height: 15px;
+          color: #ffffff;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        .header-menu__link__active {
+          display: block;
+          text-transform: uppercase;
+          font-weight: 700;
+          font-size: 12px;
+          line-height: 15px;
+          color: #c0b7e8;
+          text-decoration: none;
+        }
+      }
+
+      .header-menu-list_active{
+        display: none;
+      }
+    }
+  
+
+  
     .navbar-button {
       list-style: none;
       display: flex;
-      
-     
+
       &__button {
-        
         display: block;
         width: 155px;
-        border: none; 
+        border: none;
         border-radius: 40px;
         padding: 17px 0px;
         text-transform: uppercase;
-        font-family: 'Montserrat';
+        font-family: "Montserrat";
         text-decoration: none;
-        margin-right: 38px;
+        margin-left: 38px;
         font-weight: 700;
         font-size: 12px;
         line-height: 15px;
         color: #343045;
-        background: linear-gradient(90deg, #8176AF 0%, #C0B7E8 100%);
-      } 
+        background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
+      }
       &__button:hover {
         display: block;
         width: 155px;
@@ -88,9 +279,12 @@
         line-height: 15px;
         color: #ffffff;
         text-transform: uppercase;
-        background: #302C42;
-       
+        background: #302c42;
       }
     }
-  }
 
+    .burger-menu{
+      display: none;
+    }
+  }
+}

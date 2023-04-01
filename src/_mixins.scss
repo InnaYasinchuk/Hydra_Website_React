@@ -1,0 +1,19 @@
+@import './variables';
+
+@mixin desktop () {
+  @media (min-width: $breakpoint_xxl) {
+    @content;
+  }
+}
+
+@mixin leptop () {
+  @media (min-width: $breakpoint_xl) {
+    @content;
+  }
+}
+
+@mixin tablet () {
+  @media (min-width: $breakpoint_md) {
+    @content;
+  }
+}
