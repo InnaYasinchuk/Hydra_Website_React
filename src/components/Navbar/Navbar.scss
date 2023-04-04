@@ -1,26 +1,22 @@
 @import "../../_mixins";
 
 .header {
-  
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
   max-width: 1440px;
   padding: 25px 20px;
- 
-  
 
   .header-logo {
     display: flex;
     align-items: center;
     margin-right: 30px;
-        position: relative;
-z-index: 15
+    position: static;
+    z-index: 15;
+    
     &__item-img {
-     
-      margin-right: 9px;
-      
+    margin-right: 9px;
     }
     &__item {
       margin-left: 2px;
@@ -32,7 +28,7 @@ z-index: 15
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 42px;
+      gap: 43px;
       justify-content: center;
       position: fixed;
       width: 100%;
@@ -117,7 +113,6 @@ z-index: 15
     background: transparent;
     border: none;
     cursor: pointer;
-    position: relative;
     z-index: 15;
 
     & span,
@@ -157,7 +152,6 @@ z-index: 15
     background: transparent;
     border: none;
     cursor: pointer;
-    position: relative;
     z-index: 15;
 
     & span,
@@ -257,11 +251,12 @@ z-index: 15
     .navbar-button {
       list-style: none;
       display: flex;
+      position: static;
+      z-index: 15;
 
       &__button {
         @include button(155px, 12px, 15px);
-        margin-left: 38px;
-        
+        margin-left: 45px;
       }
       &__button:hover {
         border: 2px solid #ffffff;
