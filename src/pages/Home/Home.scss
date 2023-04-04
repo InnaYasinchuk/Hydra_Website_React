@@ -4,7 +4,8 @@
   max-width: 1440px;
   
   align-items: center;
-  z-index: 0;
+  // overflow-x: hidden;
+ 
   
 
   &__border {
@@ -37,12 +38,12 @@
  }
     .home-page_vector2 {
       position: absolute;
-      top: -80%;
-      left: -8%;
+      top: -90%;
+      left: -10%;
       width: 390px;
       height: 900px;
       z-index: 2;
-      transform: rotate(5deg);
+      // transform: rotate(5deg);
          
     }
     .home-page_vector3 {
