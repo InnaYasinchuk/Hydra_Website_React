@@ -1,20 +1,26 @@
 @import "../../_mixins";
 
 .header {
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
   max-width: 1440px;
   padding: 25px 20px;
+ 
+  
 
   .header-logo {
     display: flex;
     align-items: center;
     margin-right: 30px;
-
+        position: relative;
+z-index: 15
     &__item-img {
+     
       margin-right: 9px;
+      
     }
     &__item {
       margin-left: 2px;
@@ -29,13 +35,14 @@
       gap: 42px;
       justify-content: center;
       position: fixed;
-     width: 100%;
+      width: 100%;
       top: 0;
       bottom: 0;
       left: -100%;
       right: 0;
-      z-index: 5;
+      z-index: 15;
       transition: left 1s;
+      background-color: #302c42;
 
       .header-menu__link {
         display: block;
@@ -58,10 +65,8 @@
         color: #c0b7e8;
         text-decoration: none;
       }
-      
     }
     .header-menu-list_active {
-      
       display: flex;
       flex-direction: column;
       gap: 42px;
@@ -73,8 +78,10 @@
       left: 0;
       right: 0;
       transition: left 1s;
+      z-index: 15;
+      background-color: #302c42;
 
-        .header-menu__link {
+      .header-menu__link {
         display: block;
         text-transform: uppercase;
         text-decoration: none;
@@ -95,7 +102,7 @@
         color: #c0b7e8;
         text-decoration: none;
       }
-      }
+    }
   }
 
   .navbar-button {
@@ -110,6 +117,8 @@
     background: transparent;
     border: none;
     cursor: pointer;
+    position: relative;
+    z-index: 15;
 
     & span,
     &::before,
@@ -148,6 +157,8 @@
     background: transparent;
     border: none;
     cursor: pointer;
+    position: relative;
+    z-index: 15;
 
     & span,
     &::before,
@@ -183,22 +194,21 @@
 @include desktop() {
   .header {
     padding: 50px 84px;
-  
 
-  .header-logo {
-    display: flex;
-    align-items: center;
-    margin-right: 100px;
+    .header-logo {
+      display: flex;
+      align-items: center;
+      margin-right: 100px;
 
-    &__item-img {
-      margin-right: 11.7px;
+      &__item-img {
+        margin-right: 11.7px;
+      }
+      &__item {
+        margin-left: 3.3px;
+      }
     }
-    &__item {
-      margin-left: 3.3px;
-    }}
-  
+
     .header-menu {
-      
       .header-menu-list {
         width: auto;
         height: auto;
@@ -208,13 +218,13 @@
         gap: 42px;
         justify-content: space-between;
         top: auto;
-      bottom:auto;
-      left: auto;
-      right: auto;
-      width: auto;
-      position: static;
-      transition: none;
-            
+        bottom: auto;
+        left: auto;
+        right: auto;
+        width: auto;
+        position: static;
+        transition: none;
+
         .header-menu__link {
           display: block;
           text-transform: uppercase;
@@ -239,51 +249,29 @@
         }
       }
 
-      .header-menu-list_active{
+      .header-menu-list_active {
         display: none;
       }
     }
-  
 
-  
     .navbar-button {
       list-style: none;
       display: flex;
 
       &__button {
-        display: block;
-        width: 155px;
-        border: none;
-        border-radius: 40px;
-        padding: 17px 0px;
-        text-transform: uppercase;
-        font-family: "Montserrat";
-        text-decoration: none;
+        @include button(155px, 12px, 15px);
         margin-left: 38px;
-        font-weight: 700;
-        font-size: 12px;
-        line-height: 15px;
-        color: #343045;
-        background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
+        
       }
       &__button:hover {
-        display: block;
-        width: 155px;
         border: 2px solid #ffffff;
-        border-radius: 40px;
         padding: 15px 0px;
-        font-family: "Montserrat";
-        text-decoration: none;
-        font-weight: 700;
-        font-size: 12px;
-        line-height: 15px;
         color: #ffffff;
-        text-transform: uppercase;
         background: #302c42;
       }
     }
 
-    .burger-menu{
+    .burger-menu {
       display: none;
     }
   }

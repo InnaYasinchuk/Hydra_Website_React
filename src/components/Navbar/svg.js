@@ -7,8 +7,8 @@ export const LogoMini = () => (
     <path d="M68.1749 24.6688C69.0787 29.1592 63.5338 27.9631 63.5338 27.9631C61.2132 22.3397 57.5003 22.8642 57.5003 22.8642C60.4071 24.6898 60.627 26.2425 60.627 26.2425C52.8836 21.5213 42.3556 25.3193 38.3496 27.1028C36.1023 24.375 31.5589 18.2689 33.1711 15.4992C35.2962 11.8691 39.6198 13.9464 39.6198 13.9464C48.3647 13.8205 47.8761 11.1347 47.8761 11.1347C45.5556 12.6874 38.716 11.1347 38.716 11.1347C44.6518 11.1347 47.1677 9.05737 47.1677 9.05737C42.7465 10.0016 37.8122 5.95188 37.8122 5.95188C36.0046 -2.00071 27.6506 1.37757 27.6506 1.37757C32.878 0.601196 31.4856 5.36435 31.4856 5.36435C24.9392 7.35775 25.5499 10.5472 25.5499 10.5472C27.675 8.05019 29.4826 7.86134 29.4826 7.86134C23.498 15.1005 29.2628 25.1724 30.9727 27.7953C27.846 29.6628 20.5179 33.7754 17.2203 32.3486C12.9944 30.5231 15.4127 26.8091 15.4127 26.8091C15.315 19.2971 12.1883 19.7168 12.1883 19.7168C13.9959 21.7102 12.1883 27.5854 12.1883 27.5854C12.1883 22.4865 9.77006 20.3253 9.77006 20.3253C10.8693 24.1232 6.15487 28.3618 6.15487 28.3618C-3.10295 29.9146 0.829795 37.0908 0.829795 37.0908C-0.0740021 32.6004 5.47092 33.7964 5.47092 33.7964C7.79148 39.4199 11.5044 38.8953 11.5044 38.8953C8.59757 37.0698 8.37773 35.517 8.37773 35.517C16.5608 40.511 27.8704 35.9787 31.2902 34.3839C33.5863 37.2167 37.8611 43.05 36.2733 45.7568C34.1482 49.3868 29.8246 47.3095 29.8246 47.3095C21.0797 47.3935 21.5683 50.0793 21.5683 50.0793C23.8888 48.5265 30.7284 50.0793 30.7284 50.0793C24.7926 50.0793 22.2767 52.1566 22.2767 52.1566C26.6979 51.2124 31.6322 55.2621 31.6322 55.2621C33.4398 63.2147 41.7938 59.8364 41.7938 59.8364C36.5664 60.6128 37.9588 55.8496 37.9588 55.8496C44.5052 53.8562 43.8945 50.6668 43.8945 50.6668C41.7694 53.1638 39.9618 53.3526 39.9618 53.3526C45.8243 46.2814 40.4259 36.4823 38.5939 33.6076C41.9159 31.6142 48.6334 28.0471 51.7356 29.39C55.9614 31.2155 53.5432 34.9295 53.5432 34.9295C53.6409 42.4414 56.7675 42.0218 56.7675 42.0218C54.9599 40.0284 56.7675 34.1531 56.7675 34.1531C56.7675 39.252 59.1858 41.4133 59.1858 41.4133C58.0866 37.6153 62.801 33.3768 62.801 33.3768C72.1077 31.845 68.1749 24.6688 68.1749 24.6688Z" fill="url(#paint0_linear_13_79)"/>
     <defs>
     <linearGradient id="paint0_linear_13_79" x1="34.5" y1="0.664764" x2="34.5" y2="60.5492" gradientUnits="userSpaceOnUse">
-    <stop stop-color="#C0B7E8"/>
-    <stop offset="1" stop-color="#8176AF"/>
+    <stop stopColor="#C0B7E8"/>
+    <stop offset="1" stopColor="#8176AF"/>
     </linearGradient>
     </defs>
     </svg>
@@ -19,8 +19,8 @@ export const HMini = () => (
     <path d="M0 0H1.40473V16.6813H5.59914V0H7.00387V28H5.59914V18.0862H1.40473V28H0V0Z" fill="url(#paint0_linear_13_86)"/>
     <defs>
     <linearGradient id="paint0_linear_13_86" x1="3.50194" y1="0" x2="3.50194" y2="28" gradientUnits="userSpaceOnUse">
-    <stop stop-color="#C0B7E8"/>
-    <stop offset="1" stop-color="#8176AF"/>
+    <stop stopColor="#C0B7E8"/>
+    <stop offset="1" stopColor="#8176AF"/>
     </linearGradient>
     </defs>
     </svg>
@@ -30,8 +30,8 @@ export const YMini = () => (
     <path d="M8.39101 0L4.90886 18.0862V28H3.50413V18.0862L0.00219727 0H1.28822L4.21639 15.0784L7.12478 0H8.39101Z" fill="url(#paint0_linear_13_87)"/>
     <defs>
     <linearGradient id="paint0_linear_13_87" x1="4.19661" y1="0" x2="4.19661" y2="28" gradientUnits="userSpaceOnUse">
-    <stop stop-color="#C0B7E8"/>
-    <stop offset="1" stop-color="#8176AF"/>
+    <stop stopColor="#C0B7E8"/>
+    <stop offset="1" stopColor="#8176AF"/>
     </linearGradient>
     </defs>
     </svg>  
@@ -41,8 +41,8 @@ export const DMini = () => (
     <path d="M4.60348 28H0.389282V0H4.58369C6.1467 0 7.37337 1.24664 7.37337 2.79011V25.1901C7.39315 26.7138 6.1467 28 4.60348 28ZM1.79401 1.40495V26.5951H4.58369C5.33552 26.5951 5.98842 25.9618 5.98842 25.1901V2.79011C5.98842 2.03816 5.3553 1.38516 4.58369 1.38516H1.79401V1.40495Z" fill="url(#paint0_linear_13_88)"/>
     <defs>
     <linearGradient id="paint0_linear_13_88" x1="3.88144" y1="0" x2="3.88144" y2="28" gradientUnits="userSpaceOnUse">
-    <stop stop-color="#C0B7E8"/>
-    <stop offset="1" stop-color="#8176AF"/>
+    <stop stopColor="#C0B7E8"/>
+    <stop offset="1" stopColor="#8176AF"/>
     </linearGradient>
     </defs>
     </svg>
@@ -52,8 +52,8 @@ export const RMini = () => (
     <path d="M7.5931 28H6.1488L3.67569 18.0862H1.99397V28H0.589233V0H4.78364C6.34665 0 7.57332 1.24664 7.57332 2.79011V15.2763C7.57332 16.6813 6.48515 17.8686 5.1002 18.0269L7.5931 28ZM1.99397 16.6813H4.78364C5.53547 16.6813 6.18837 16.0481 6.18837 15.2763V2.79011C6.18837 2.03816 5.55525 1.38516 4.78364 1.38516H1.99397V16.6813Z" fill="url(#paint0_linear_13_89)"/>
     <defs>
     <linearGradient id="paint0_linear_13_89" x1="4.09117" y1="0" x2="4.09117" y2="28" gradientUnits="userSpaceOnUse">
-    <stop stop-color="#C0B7E8"/>
-    <stop offset="1" stop-color="#8176AF"/>
+    <stop stopColor="#C0B7E8"/>
+    <stop offset="1" stopColor="#8176AF"/>
     </linearGradient>
     </defs>
     </svg>
@@ -63,8 +63,8 @@ export const AMini = () => (
     <path d="M2.82713 18.0862L1.85767 28H0.591431L3.40089 0H6.19057L8.98025 28H7.71401L6.74455 18.0862H2.82713ZM5.06283 1.40495H4.50885L2.98541 16.6813H6.58627L5.06283 1.40495Z" fill="url(#paint0_linear_13_90)"/>
     <defs>
     <linearGradient id="paint0_linear_13_90" x1="4.78584" y1="0" x2="4.78584" y2="28" gradientUnits="userSpaceOnUse">
-    <stop stop-color="#C0B7E8"/>
-    <stop offset="1" stop-color="#8176AF"/>
+    <stop stopColor="#C0B7E8"/>
+    <stop offset="1" stopColor="#8176AF"/>
     </linearGradient>
     </defs>
     </svg>
@@ -93,8 +93,8 @@ export const Logo = () => (
         y2="102.927"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#C0B7E8" />
-        <stop offset="1" stop-color="#8176AF" />
+        <stop stopColor="#C0B7E8" />
+        <stop offset="1" stopColor="#8176AF" />
       </linearGradient>
     </defs>
   </svg>
@@ -106,8 +106,8 @@ export const H = () => (
 <path d="M0 0H2.32086V27.4049H9.25075V0H11.5716V46H9.25075V29.7131H2.32086V46H0V0Z" fill="url(#paint0_linear_1_11)"/>
 <defs>
 <linearGradient id="paint0_linear_1_11" x1="5.78581" y1="0" x2="5.78581" y2="46" gradientUnits="userSpaceOnUse">
-<stop stop-color="#C0B7E8"/>
-<stop offset="1" stop-color="#8176AF"/>
+<stop stopColor="#C0B7E8"/>
+<stop offset="1" stopColor="#8176AF"/>
 </linearGradient>
 </defs>
 </svg>
@@ -118,8 +118,8 @@ export const Y = () => (
 <path d="M14.7329 0L8.97978 29.7131V46H6.65891V29.7131L0.873108 0H2.99784L7.83569 24.7717L12.6408 0H14.7329Z" fill="url(#paint0_linear_1_12)"/>
 <defs>
 <linearGradient id="paint0_linear_1_12" x1="7.803" y1="0" x2="7.803" y2="46" gradientUnits="userSpaceOnUse">
-<stop stop-color="#C0B7E8"/>
-<stop offset="1" stop-color="#8176AF"/>
+<stop stopColor="#C0B7E8"/>
+<stop offset="1" stopColor="#8176AF"/>
 </linearGradient>
 </defs>
 </svg>
@@ -130,8 +130,8 @@ export const D = () => (
 <path d="M6.997 46H0.0344238V0H6.96431C9.54668 0 11.5733 2.04806 11.5733 4.58375V41.3837C11.606 43.8869 9.54668 46 6.997 46ZM2.35528 2.30813V43.6919H6.96431C8.20647 43.6919 9.28518 42.6516 9.28518 41.3837V4.58375C9.28518 3.34841 8.23915 2.27562 6.96431 2.27562H2.35528V2.30813Z" fill="url(#paint0_linear_1_13)"/>
 <defs>
 <linearGradient id="paint0_linear_1_13" x1="5.80408" y1="0" x2="5.80408" y2="46" gradientUnits="userSpaceOnUse">
-<stop stop-color="#C0B7E8"/>
-<stop offset="1" stop-color="#8176AF"/>
+<stop stopColor="#C0B7E8"/>
+<stop offset="1" stopColor="#8176AF"/>
 </linearGradient>
 </defs>
 </svg>
@@ -142,8 +142,8 @@ export const R = () => (
 <path d="M11.806 46H9.41978L5.33376 29.7131H2.55527V46H0.234406V0H7.1643C9.74666 0 11.7733 2.04806 11.7733 4.58375V25.0968C11.7733 27.4049 9.97548 29.3555 7.68731 29.6155L11.806 46ZM2.55527 27.4049H7.1643C8.40645 27.4049 9.48516 26.3647 9.48516 25.0968V4.58375C9.48516 3.34841 8.43914 2.27562 7.1643 2.27562H2.55527V27.4049Z" fill="url(#paint0_linear_1_14)"/>
 <defs>
 <linearGradient id="paint0_linear_1_14" x1="6.02021" y1="0" x2="6.02021" y2="46" gradientUnits="userSpaceOnUse">
-<stop stop-color="#C0B7E8"/>
-<stop offset="1" stop-color="#8176AF"/>
+<stop stopColor="#C0B7E8"/>
+<stop offset="1" stopColor="#8176AF"/>
 </linearGradient>
 </defs>
 </svg>
@@ -154,8 +154,8 @@ export const A = () => (
 <path d="M3.80128 29.7131L2.19955 46H0.107513L4.74923 0H9.35827L13.9673 46H11.8753L10.2735 29.7131H3.80128ZM7.49504 2.30813H6.57977L4.06278 27.4049H10.012L7.49504 2.30813Z" fill="url(#paint0_linear_1_15)"/>
 <defs>
 <linearGradient id="paint0_linear_1_15" x1="7.03741" y1="0" x2="7.03741" y2="46" gradientUnits="userSpaceOnUse">
-<stop stop-color="#C0B7E8"/>
-<stop offset="1" stop-color="#8176AF"/>
+<stop stopColor="#C0B7E8"/>
+<stop offset="1" stopColor="#8176AF"/>
 </linearGradient>
 </defs>
 </svg>
