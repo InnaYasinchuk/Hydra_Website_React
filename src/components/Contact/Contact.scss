@@ -1,0 +1,24 @@
+.contacts{
+  display: flex;
+ }
+ 
+.contact{
+  
+  &__title{
+   
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+    margin: 8px 15px;
+    text-align: left;
+  }
+
+  &__description{
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    text-align: left;
+    margin: 0 20px;
+  }
+}

@@ -81,6 +81,9 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+  .home-page__text{
+    display: none
+  }
 
   .home-page__button {
     @include button(292px, 14px, 17px);
@@ -101,7 +104,7 @@
     display: flex;
     flex-direction: row-reverse;
     gap: 280px;
-    padding: 45px 84px;
+    padding: 30px 84px;
     
 
     &__border {
@@ -163,6 +166,7 @@
       line-height: 56px;
     }
     .home-page__text {
+      display: block;
       max-width: 450px;
       font-size: 16px;
       line-height: 20px;
@@ -174,7 +178,14 @@
       @include button(214px, 12px, 15px);
       margin: 0;
       
+      &:hover {
+        border: 2px solid #ffffff;
+        padding: 16px 0px;
+        color: #ffffff;
+        background: #302c42;
+      }
     }
+    
     .home-page__arrow{
       display: block;
       position: absolute;

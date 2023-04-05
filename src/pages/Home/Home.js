@@ -8,7 +8,7 @@ import arrowRight from "../../pages/Home/images/home-arrow-small-right1.png"
 import Slider from "../../components/Slider/Slider";
 
 const Home = () => {
-  const isMobile = window.innerWidth <= 768;
+ 
   return (
     <div className="home">
       <section className="home-page">
@@ -23,12 +23,11 @@ const Home = () => {
           <h1 className="home-page__title"><span className="home-page__title_accent1">Dive</span> Into The
             Depths <br /> Of<span className="home-page__title_accent2"> Virtual Reality</span>
           </h1>
-          { isMobile ? '' : <p className="home-page__text">
+          <p className="home-page__text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore nisl tincidunt eget.
-              Lectus mauris eros in vitae.
+              Lectus mauris eros in vitae
             </p>
-          }
           <NavLink to="/services" className="home-page__button">
             Build your world
           </NavLink>

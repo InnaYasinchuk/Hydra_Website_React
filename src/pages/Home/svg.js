@@ -46,7 +46,7 @@ export const HomeV3 = () => (
 
 export const HomeV4 = () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="243" height="565" viewBox="0 0 243 565" fill="none">
-    <path d="M1.5 3C104.5 41.1667 293.4 206.8 225 564" stroke="url(#paint0_linear_16_174)" stroke-opacity="0.06" strokeWidth="6"/>
+    <path d="M1.5 3C104.5 41.1667 293.4 206.8 225 564" stroke="url(#paint0_linear_16_174)" strokeOpacity="0.06" strokeWidth="6"/>
     <defs>
     <linearGradient id="paint0_linear_16_174" x1="-23.5" y1="-37.5" x2="333" y2="602.5" gradientUnits="userSpaceOnUse">
     <stop stopColor="#343045"/>
@@ -55,17 +55,5 @@ export const HomeV4 = () => (
     <stop offset="0.973958" stopColor="#343045"/>
     </linearGradient>
     </defs>
-    </svg>
-)
-
-export const HomeV5 = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="1" height="117" viewBox="0 0 1 117" fill="none">
-    <path d="M0.5 116.5V0" stroke="#C0B7E8" stroke-opacity="0.33"/>
-    </svg>
-)
-
-export const HomeV6 = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="2" height="117" viewBox="0 0 2 117" fill="none">
-    <path d="M1 116.5V0" stroke="#C0B7E8" stroke-opacity="0.33"/>
     </svg>
 )
