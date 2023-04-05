@@ -4,9 +4,10 @@ import { Navigation } from 'swiper';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import './slider.scss';
-import Contact from "../Contact/contact";
+
 import {contacts} from "../Contact/contactList";
 import { SliderSeparator1, SliderSeparator2 } from "./svg";
+import Contact from "../Contact/contact";
 
 const Slider = () => {
 
@@ -24,7 +25,7 @@ const Slider = () => {
     >
       {contacts.map((contact) => (
           <SwiperSlide key={contact.id}>
-            <Contact img={contact.img} title={contact.title} description={contact.description} />
+            < Contact img={contact.img} title={contact.title} description={contact.description} />
           </SwiperSlide>
         ))}
       ...

@@ -8,7 +8,6 @@ import Services from "./pages/Services";
 import About from "./pages/About";
 import Technologies from "./pages/Technologies";
 import HowTo from "./pages/Howto";
-import Contact from "./pages/Contact";
 import Join from "./pages/Join";
 
 
@@ -24,7 +23,6 @@ const App = () => {
           <Route path="/services" element={<Services />} />
           <Route path="/technologies" element={<Technologies />} />
           <Route path="/how_to" element={<HowTo />} />
-          <Route path="/contact" element={<Contact />} />
           <Route path="/join" element={<Join />} />
         </Routes>
       </BrowserRouter>
