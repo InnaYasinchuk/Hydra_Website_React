@@ -7,7 +7,7 @@ import './slider.scss';
 
 import {contacts} from "../Contact/contactList";
 import { SliderSeparator1, SliderSeparator2 } from "./svg";
-import Contact from "../Contact/contact";
+import Contact from "./../../components/Contact/Contact";
 
 const Slider = () => {
 
