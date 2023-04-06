@@ -9,7 +9,7 @@ import { contacts } from "../Contact/contactList";
 import { SliderSeparator1, SliderSeparator2 } from "./svg";
 import swiperLeft from "./images/swiper-left.png";
 import swiperRight from "./images/swiper-right.png";
-import Contact from "./../../components/Contact/Contact";
+import Contact from "../Contact/Contact";
 
 const Slider = () => {
   const isMobile = window.innerWidth <= 768;
@@ -35,6 +35,7 @@ const Slider = () => {
               img={contact.img}
               title={contact.title}
               description={contact.description}
+              href={contact.href}
             />
           </SwiperSlide>
         ))}
@@ -60,6 +61,8 @@ const Slider = () => {
             img={contact.img}
             title={contact.title}
             description={contact.description}
+            href={contact.href}
+            target={contact.target}
           />
         ))}
       </div>
