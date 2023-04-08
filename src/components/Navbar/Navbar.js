@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.scss";
-import { Logo, LogoMini, H, Y, D, R, A, HMini, YMini, DMini, RMini, AMini } from "./svg";
+import Logo from "../Logo/Logo";
 
 
 const Navbar = () => {
@@ -11,18 +11,7 @@ const isMobile = window.innerWidth <= 768;
   
   return (
     <header className="header">
-      <div className="header-logo">
-      <NavLink to='/'>       
-          <span className="header-logo__item-img">{isMobile ? <LogoMini /> : <Logo />}</span>
-      </NavLink> 
-      <NavLink to='/'>   
-          <span className="header-logo__item">{isMobile ? <HMini /> : <H />}</span>
-          <span className="header-logo__item">{isMobile ? <YMini /> : <Y />}</span>
-          <span className="header-logo__item">{isMobile ? <DMini /> : <D />}</span>
-          <span className="header-logo__item">{isMobile ? <RMini /> : <R />}</span>
-          <span className="header-logo__item">{isMobile ? <AMini /> : <A />}</span>
-      </NavLink>
-      </div>
+      <Logo />
       <nav className="header-menu">
         <ul className={ burger ? "header-menu-list_active" : "header-menu-list"} >
           {isMobile ? 

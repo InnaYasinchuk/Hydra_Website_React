@@ -36,6 +36,7 @@ const Slider = () => {
               title={contact.title}
               description={contact.description}
               href={contact.href}
+              target={contact.target}
             />
           </SwiperSlide>
         ))}
@@ -46,14 +47,8 @@ const Slider = () => {
   } else {
     return (
       <div className="slider">
-        <svg className="slider__separator1">
-          {" "}
-          <SliderSeparator1 />{" "}
-        </svg>
-        <svg className="slider__separator2">
-          {" "}
-          <SliderSeparator2 />{" "}
-        </svg>
+        <svg className="slider__separator1"><SliderSeparator1 /></svg>
+        <svg className="slider__separator2"><SliderSeparator2 /></svg>
 
         {contacts.map((contact) => (
           <Contact

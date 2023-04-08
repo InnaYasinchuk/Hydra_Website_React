@@ -8,21 +8,6 @@
   max-width: 1440px;
   padding: 25px 20px;
 
-  .header-logo {
-    display: flex;
-    align-items: center;
-    margin-right: 30px;
-    position: static;
-    z-index: 15;
-    
-    &__item-img {
-    margin-right: 9px;
-    }
-    &__item {
-      margin-left: 2px;
-    }
-  }
-
   .header-menu {
     .header-menu-list {
       list-style: none;
@@ -188,19 +173,6 @@
 @include desktop() {
   .header {
     padding: 50px 84px;
-
-    .header-logo {
-      display: flex;
-      align-items: center;
-      margin-right: 100px;
-
-      &__item-img {
-        margin-right: 11.7px;
-      }
-      &__item {
-        margin-left: 3.3px;
-      }
-    }
 
     .header-menu {
       .header-menu-list {

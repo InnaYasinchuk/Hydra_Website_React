@@ -1,0 +1,35 @@
+@import "../../_mixins";
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  position: static;
+  z-index: 15;
+
+  &__item-img {
+    margin-right: 9px;
+  }
+  &__item {
+    margin-left: 2px;
+  }
+  .header-logo__item:hover svg {
+    transform: rotate(5deg);
+    transition: transform 0.1s ease-in-out;
+  }
+}
+
+@include desktop() {
+  .header-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+
+    &__item-img {
+      margin-right: 11.7px;
+    }
+    &__item {
+      margin-left: 3.3px;
+    }
+  }
+}

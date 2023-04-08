@@ -72,7 +72,7 @@ export const AMini = () => (
 
 // tablet, leptop, desktop
 
-export const Logo = () => (
+export const LogoMax = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="102"
