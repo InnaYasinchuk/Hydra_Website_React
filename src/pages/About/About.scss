@@ -1,52 +1,164 @@
 @import "../../_mixins";
 
 .about {
-  max-width: 1272px;
-  min-height: 756px;
-  margin: 50px auto;
+  min-width: 352px;
+  min-height: 800px;
+  margin: 30px auto;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  text-align: left;
+  align-items: center;
 
-  .about-titles {
+  .about-first-blok {
     &__title {
-      @include title();
-      margin: 10px 0;
+      @include title(26px);
+      margin: 16px 0;
+    }
+
+    &__subtitle {
+      @include subtitle(26px);
+    }
+
+    &__img {
+      max-width: 337px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 140px 60px;
+      margin: 36px 0 51px;
+      z-index: 10;
+      position: relative;
+    }
+    &__vector7,
+    &__vector8,
+    &__vectorString,
+    &__vectorArrow {
+      display: none;
+    }
+  }
+
+  .about-second-blok {
+    &__description_top {
+      display: none;
+    }
+    &__title {
+      display: none;
     }
     &__subtitle {
-      @include subtitle();
-      margin-bottom: 42px;
+      display: none;
     }
-  }
-  
-  .about__description_top{
-    @include description(650px, 151px);
-    
-  }
-  .about__description{
-    @include description(630px, 28px);
-   
-    
-  }
-  
-  .about__img{
-    max-width: 524px;
-   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 240px 100px;
-margin-top: 50px;
+    &__description {
+      @include description(352px, 12px, 34px);
+      text-align: left;
+    }
 
-  }
-  .about__button{
-     @include button(214px, 12px, 15px);
-     text-align: center;
-     margin-left: 0;
+    &__button {
+      @include button(214px, 12px, 15px);
+      text-align: center;
+      margin: 0 auto;
+      z-index: 10;
 
-     
-  }
-  .about__button:hover {
+      &:hover {
         border: 2px solid #ffffff;
         padding: 15px 0px;
         color: #ffffff;
         background: #302c42;
       }
+    }
+  }
+}
+
+@include desktop() {
+  .about {
+    max-width: 1272px;
+    min-height: 756px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+
+    .about-first-blok {
+      position: relative;
+      &__title {
+        @include title(36px);
+        margin: 10px 0;
+      }
+
+      &__subtitle {
+        @include subtitle(36px);
+        margin-bottom: 32px;
+      }
+
+      &__img {
+        max-width: 524px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 240px 100px;
+        margin: 65px 0 0 0;
+      }
+      &__vector7,
+      &__vector8,
+      &__vectorString,
+      &__vectorArrow {
+        display: block;
+        position: absolute;
+        z-index: 2;
+        width: 1440%;
+        height: 100%;
+      }
+      &__vector7 {
+        top: 27%;
+        left: -18%;
+      }
+      &__vector8 {
+        top: 67%;
+        left: -9%;
+      }
+      &__vectorString {
+        top: 11%;
+        left: 53%;
+      }
+      &__vectorArrow {
+        top: 67px;
+        left: 434px;
+      }
+    }
+
+    .about-second-blok {
+      min-height: 762px;
+
+      &__description_top {
+        @include description(650px, 16px, 141px);
+        display: block;
+        margin-top: 10px;
+      }
+
+      &__description {
+        @include description(630px, 16px, 28px);
+      }
+
+      &__title {
+        @include title(36px);
+        margin: 10px 0;
+        display: block;
+      }
+
+      &__subtitle {
+        @include subtitle(36px);
+        margin-bottom: 32px;
+        display: block;
+      }
+
+      &__button {
+        @include button(214px, 12px, 15px);
+        text-align: center;
+        margin-left: 0;
+
+        &:hover {
+          border: 2px solid #ffffff;
+          padding: 15px 0px;
+          color: #ffffff;
+          background: #302c42;
+        }
+      }
+    }
+  }
 }
