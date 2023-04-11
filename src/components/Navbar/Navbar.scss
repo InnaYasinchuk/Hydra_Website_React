@@ -8,7 +8,7 @@
   max-width: 1440px;
   padding: 25px 20px;
   position: relative;
-  z-index: 25;
+  z-index: 40;
 
   .header-menu {
     .header-menu-list {
@@ -23,7 +23,7 @@
       bottom: 0;
       left: -100%;
       right: 0;
-      z-index: 15;
+      z-index: 40;
       transition: left 1s;
       background-color: #302c42;
 
@@ -61,7 +61,7 @@
       left: 0;
       right: 0;
       transition: left 1s;
-      z-index: 15;
+      z-index: 40;
       background-color: #302c42;
 
       .header-menu__link {
@@ -100,7 +100,7 @@
     background: transparent;
     border: none;
     cursor: pointer;
-    z-index: 15;
+    z-index: 40;
 
     & span,
     &::before,
@@ -139,7 +139,7 @@
     background: transparent;
     border: none;
     cursor: pointer;
-    z-index: 15;
+    z-index: 40;
 
     & span,
     &::before,
@@ -226,7 +226,7 @@
       list-style: none;
       display: flex;
       position: static;
-      z-index: 15;
+      z-index: 40n;
 
       &__button {
         @include button(155px, 12px, 15px);
