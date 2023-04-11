@@ -1,0 +1,112 @@
+@import "../../_mixins";
+
+.join {
+  max-width: 1275px;
+  min-height: 973px;
+  margin: 25px;
+  padding: 45px 0;
+  background: radial-gradient(50% 50% at 50% 50%, #403a5f 0%, #211e2e 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 40px;
+  position: relative;
+  z-index: 25;
+
+  .join-mobile-vector{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 9%;
+    left: 33%;
+  }
+
+  &__title {
+    @include title(24px);
+  }
+
+  &__subtitle {
+    @include subtitle(24px);
+    margin: 40px auto 36px;
+  }
+
+  &__form {
+    .join__form__input,
+    .join__form__input_area {
+      min-width: 300px;
+      padding: 18px 29px;
+      margin-bottom: 22px;
+      border: 2px solid #ffffff;
+      border-radius: 40px;
+      background-color: transparent;
+
+      &::placeholder {
+        font-size: 14px;
+        line-height: 17px;
+        color: #ffffff;
+      }
+    }
+    .join__form__input_area {
+      min-height: 219px;
+      resize: none;
+    }
+    .join__form__button{
+      @include button(292px, 14px, 17px);
+      margin: 52px auto;
+
+      &:hover {
+        border: 2px solid #ffffff;
+        padding: 16px 0px;
+        color: #ffffff;
+        background: #302c42;
+      }
+    }
+  }
+}
+
+@include desktop(){
+  
+.join {
+  margin: 30px 84px;
+  padding: 90px 102px 84px;
+  border-radius: 100px;
+
+   .join-desktop-vector{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 15%;
+    left: 33%;
+  }
+
+  &__title {
+    @include title(36px);
+  }
+
+  &__subtitle {
+    @include subtitle(36px);
+    margin: 51px auto 65px;
+  }
+
+  &__form {
+    .join__form__input,
+    .join__form__input_area {
+      width: 520px;
+      padding: 27px 42px;
+      margin: 18px 5px;
+     
+    }
+    .join__form__input_area {
+      width: 1058px;
+      min-height: 210px;
+      resize: none;
+    }
+    .subject{
+      width: 1058px;
+    }
+    .join__form__button{
+      @include button(292px, 14px, 17px);
+      margin: 51px auto 0;
+    }
+  }
+}
+
+}

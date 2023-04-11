@@ -35,24 +35,24 @@
   background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
 }
 
-@mixin title($f-size){
-font-weight: 700;
-      font-size: $f-size;
-      line-height: 122%;
-      color: #ffffff;
+@mixin title($f-size) {
+  font-weight: 700;
+  font-size: $f-size;
+  line-height: 122%;
+  color: #ffffff;
 }
 
-@mixin subtitle($f-size){
- font-weight: 300;
-      font-size: $f-size;
-      line-height: 44px;
-      color: #ffffff; 
+@mixin subtitle($f-size) {
+  font-weight: 300;
+  font-size: $f-size;
+  line-height: 122%;
+  color: #ffffff;
 }
 
-@mixin description($max-width, $f-size, $marg-bot){
-font-size: $f-size;
-    line-height: 155%;
-    color: #FFFFFF;
-    max-width: $max-width;
-    margin-bottom: $marg-bot;
+@mixin description($max-width, $f-size, $marg-bot) {
+  font-size: $f-size;
+  line-height: 155%;
+  color: #ffffff;
+  max-width: $max-width;
+  margin-bottom: $marg-bot;
 }

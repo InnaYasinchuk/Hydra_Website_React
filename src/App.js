@@ -8,7 +8,7 @@ import Services from "./pages/Services";
 import About from "./pages/About/About";
 import Technologies from "./pages/Technologies";
 import HowTo from "./pages/Howto";
-import Join from "./pages/Join";
+import Join from "./pages/Join/Join";
 import Footer from "./components/Footer/Footer";
 
 
