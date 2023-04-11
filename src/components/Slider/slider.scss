@@ -43,11 +43,11 @@
   margin: 58px auto;
   padding: 50px 45px;
   max-width: 1260px;
-  background: radial-gradient(50% 2900.76% at 50% 53.89%, rgba(58, 52, 86, 0.95) 0%, #211E2E 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  background: radial-gradient(50% 2900.76% at 50% 53.89%, rgba(58, 52, 86, 0.95) 0%, #211E2E 100%);
   box-shadow: 0px 4px 4px rgba(192, 183, 232, 0.01);
   border-radius: 90px;
   position: relative;
-  z-index: 10;
+  z-index: 25;
 
   &__separator1{
     position: absolute;

@@ -20,7 +20,7 @@ const contacts = [
     alt: 'phone',
     title: 'Give Us a Call',
     description: '(110) 1111-1010',
-    href: 'tel:%2B3811011111010',
+    href: 'tel:%2B11011111010',
     id: uuidv4(),
   },
   {

@@ -9,14 +9,17 @@ body{
 }
 .App {
 
+max-width: 1440px;
   min-height: 100vh;
+  margin: 0 auto;
  text-align: center;
   background-color: #302C42;
+  overflow: hidden;
+  // display: flex;
+  // flex-direction: column;
+  // // justify-content: space-between;
+  // align-content: space-between;
   
-  
-  // для того, щоб рівномірно розташувалось по сторінці + стікі футер
-// display: flex;
-// flex-direction: column;
  
 }
 

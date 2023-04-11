@@ -9,6 +9,7 @@ import About from "./pages/About/About";
 import Technologies from "./pages/Technologies";
 import HowTo from "./pages/Howto";
 import Join from "./pages/Join";
+import Footer from "./components/Footer/Footer";
 
 
 const App = () => {
@@ -25,7 +26,10 @@ const App = () => {
           <Route path="/how_to" element={<HowTo />} />
           <Route path="/join" element={<Join />} />
         </Routes>
+
+      <Footer /> 
       </BrowserRouter>
+    
     </div>
   );
 };
