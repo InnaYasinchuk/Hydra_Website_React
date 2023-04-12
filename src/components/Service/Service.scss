@@ -43,5 +43,13 @@
   &__button{
     @include button(154px, 12px, 15px);
     margin: 0 auto 40px;
+    position: relative;
+    z-index: 25;
+    &:hover {
+        border: 2px solid #ffffff;
+        padding: 16px 0px;
+        color: #ffffff;
+        background: transparent;
+      }
   }
 }

@@ -90,6 +90,12 @@
     margin: 36px auto 53px auto;
     position: relative;
     z-index: 5;
+    &:hover {
+        border: 2px solid #ffffff;
+        padding: 16px 0px;
+        color: #ffffff;
+        background: #302c42;
+      }
   }
    .home-page__arrow{
     display: none;
