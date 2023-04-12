@@ -19,19 +19,19 @@ const Footer = () => {
 
 
     <section className="footer-section">
-      <NavLink to='/' className="footer-section__logo"><FooterLogo /></NavLink> 
+      <NavLink to='/' className="footer-section__logo" target='_top'><FooterLogo /></NavLink> 
       <div className="footer-section__services">
         <ul className="footer-menu">
-          <li><NavLink to='/about'className={({isActive}) => isActive ? "footer-menu__link_active" : "footer-menu__link"} >About</NavLink></li>
-          <li><NavLink to='/services' className={({isActive}) => isActive ? "footer-menu__link_active" : "footer-menu__link" } >Services</NavLink></li>
-          <li><NavLink to='/technologies' className={({isActive}) => isActive ? "footer-menu__link_active" : "footer-menu__link"} >Technologies</NavLink></li>
-          <li><NavLink to='/how_to' className={({isActive}) => isActive ? "footer-menu__link_active" : "footer-menu__link"} >How to</NavLink></li>
-          <li><NavLink to='/join' className={({isActive}) => isActive ? "footer-menu__link_active" : "footer-menu__link"} >Join Gidra</NavLink></li>
+          <li><NavLink to='/about'className={({isActive}) => isActive ? "footer-menu__link_active" : "footer-menu__link"} target='_top' >About</NavLink></li>
+          <li><NavLink to='/services' className={({isActive}) => isActive ? "footer-menu__link_active" : "footer-menu__link" } target='_top' >Services</NavLink></li>
+          <li><NavLink to='/technologies' className={({isActive}) => isActive ? "footer-menu__link_active" : "footer-menu__link"} target='_top'>Technologies</NavLink></li>
+          <li><NavLink to='/how_to' className={({isActive}) => isActive ? "footer-menu__link_active" : "footer-menu__link"} target='_top'>How to</NavLink></li>
+          <li><NavLink to='/join' className={({isActive}) => isActive ? "footer-menu__link_active" : "footer-menu__link"} target='_top'>Join Gidra</NavLink></li>
       </ul>
       </div>
       <div className="footer-section__info">
         <ul className="footer-menu">
-          <li className= "footer-menu__link">F.A.Q</li>
+          <li className= "footer-menu__link" >F.A.Q</li>
           <li className="footer-menu__link">SITEMAP</li>
           <li className="footer-menu__link">CONDITIONS</li>
           <li className="footer-menu__link">LICENSES</li>

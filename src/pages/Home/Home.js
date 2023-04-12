@@ -5,7 +5,7 @@ import "./Home.scss";
 import { HomeV1, HomeV2, HomeV3, HomeV4 } from "./svg";
 import mainImage from "../../pages/Home/images/home-img.webp";
 import arrowRight from "../../pages/Home/images/home-arrow-small-right1.png"
-import Slider from "../../components/Slider/Slider";
+import ContactsHome from "../../components/ContactsHome/ContactsHome";
 
 const Home = () => {
  
@@ -34,7 +34,7 @@ const Home = () => {
           <img src={arrowRight} alt="arrow" className="home-page__arrow"></img>
         </div>
       </section>
-      <Slider />
+      <ContactsHome />
     </div>
   );
 };

@@ -51,6 +51,8 @@
     .join__form__button{
       @include button(292px, 14px, 17px);
       margin: 52px auto;
+      position: relative;
+      z-index: 25;
 
       &:hover {
         border: 2px solid #ffffff;

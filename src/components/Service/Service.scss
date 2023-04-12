@@ -1,0 +1,47 @@
+@import "../../_mixins";
+
+.service-card{
+  width: 310px;
+  background: radial-gradient(50% 50% at 50% 50%, #433D60 0%, #211E2E 100%);
+  border-radius: 40px;
+  align-items: center;
+
+  &__border{
+    max-width: 219px;
+    min-height: 219px;
+    margin: 23px auto;
+    position: relative;
+    background: rgba(14, 14, 14, 0.32);
+    border-radius: 50%;
+
+    .service-card__image{
+      position: absolute;
+      max-width: 191px;
+      border-radius: 50%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .service-card__vector{
+      position: absolute;
+      bottom: -101%;
+      left: 14%;
+    }
+  }
+  &__title{
+    @include title(24px);
+    margin-bottom: 39px;
+  }
+
+  &__description{
+    @include description(250px, 12px, 35px);
+    text-align: left;
+    margin: 0 auto 35px;
+    
+  }
+
+  &__button{
+    @include button(154px, 12px, 15px);
+    margin: 0 auto 40px;
+  }
+}
