@@ -1,9 +1,17 @@
 @import "../../_mixins";
+@import "../../variables";
 
 .home-page {
   max-width: 1440px;
   margin: 0 auto;
   align-items: center;
+
+  @include desktop {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 280px;
+    padding: 30px 84px;
+  }
 
   &__border {
     position: relative;
@@ -13,6 +21,10 @@
     background: rgba(0, 0, 0, 0.13);
     border-radius: 100px 100px 100px 240px;
     z-index: 5;
+    @include desktop {
+      width: 524px;
+      height: 455px;
+    }
 
     .home-page__image {
       position: absolute;
@@ -24,30 +36,28 @@
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: 10;
+      @include desktop {
+        width: 490px;
+        height: 426px;
+      }
     }
     .home-page_vector1 {
-      position: absolute;
-      top: -18%;
-      left: 7%;
-      width: 100%;
-      height: 900px;
-      z-index: 2;
+      @include vector(-18%, 7%, 100%, 900px);
+      @include desktop {
+        @include vector(-18%, 35%, 100%, 900px);
+      }
     }
     .home-page_vector2 {
-      position: absolute;
-      top: -90%;
-      left: -10%;
-      width: 390px;
-      height: 900px;
-      z-index: 2;
+      @include vector(-90%, 10%, 390px, 900px);
+      @include desktop {
+        @include vector(-55%, 20%, 500px, 1000px);
+      }
     }
     .home-page_vector3 {
-      position: absolute;
-      top: 33%;
-      left: -40%;
-      width: 510px;
-      height: 900px;
-      z-index: 2;
+      @include vector(33%, -40%, 510px, 900px);
+      @include desktop {
+        @include vector(30%, -20%, 800px, 900px);
+      }
     }
   }
 
@@ -55,34 +65,54 @@
     position: relative;
     font-weight: 700;
     font-size: 24px;
-    line-height: 29px;
+    line-height: 122%;
     text-align: center;
-    color: #ffffff;
+    color: $mainColor;
     margin-top: 30px;
     z-index: 5;
+    @include desktop {
+      font-size: 40px;
+      text-align: left;
+      margin: 0;
+    }
   }
   .home-page__title_accent1 {
     font-weight: 700;
     font-size: 36px;
-    line-height: 44px;
+    line-height: 122%;
     text-align: center;
     background: linear-gradient(91.57deg, #c0b7e8 -1.02%, #8176af 36.25%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    @include desktop {
+      font-size: 46px;
+    }
   }
   .home-page__title_accent2 {
     font-weight: 700;
     font-size: 32px;
-    line-height: 39px;
+    line-height: 122%;
     text-align: center;
     background: linear-gradient(269deg, #c0b7e8 -3.72%, #8176af 82.17%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    @include desktop {
+      font-size: 46px;
+    }
   }
-  .home-page__text{
-    display: none
+  .home-page__text {
+    display: none;
+    @include desktop {
+      display: block;
+      max-width: 450px;
+      font-size: 16px;
+      line-height: 125%;
+      color: $mainColor;
+      margin: 36px auto 66px auto;
+      text-align: left;
+    }
   }
 
   .home-page__button {
@@ -90,114 +120,32 @@
     margin: 36px auto 53px auto;
     position: relative;
     z-index: 5;
-    &:hover {
-        border: 2px solid #ffffff;
-        padding: 16px 0px;
-        color: #ffffff;
-        background: #302c42;
-      }
-  }
-   .home-page__arrow{
-    display: none;
-   }
-   .home-page_vector4{
-    display: none;
-   }
-}
-
-@include desktop() {
-  .home-page {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 280px;
-    padding: 30px 84px;
-    
-
-    &__border {
-      width: 524px;
-      height: 455px;
-
-      .home-page__image {
-        width: 490px;
-        height: 426px;
-      }
-      .home-page_vector1 {
-        top: -18%;
-        left: 35%;
-        width: 100%;
-        height: 900px;
-         
-      }
-      .home-page_vector2 {
-        top: -55%;
-        left: 20%;
-        width: 500px;
-        height: 1000px;
-       
-      }
-      .home-page_vector3 {
-        top: 30%;
-        left: -20%;
-        width: 800px;
-        height: 900px;
-        
-      }
-      
-    }
-    .home-page__description{
-      position: relative;
-
-      .home-page_vector4{
-        display: block;
-        position: absolute;
-        width: 300px;
-        height: 700px;
-        left: -25%;
-        top: -19%;
-      }
-
-    
-    .home-page__title {
-      font-size: 40px;
-      line-height: 49px;
-      text-align: left;
-      margin: 0;
-    }
-    .home-page__title_accent1 {
-      font-size: 46px;
-      line-height: 56px;
-    }
-    .home-page__title_accent2 {
-      font-size: 46px;
-      line-height: 56px;
-    }
-    .home-page__text {
-      display: block;
-      max-width: 450px;
-      font-size: 16px;
-      line-height: 20px;
-      color: #ffffff;
-      margin: 36px auto 66px auto;
-      text-align: left;
-    }
-    .home-page__button{
+    @include desktop {
       @include button(214px, 12px, 15px);
       margin: 0;
-      
-      &:hover {
-        border: 2px solid #ffffff;
-        padding: 16px 0px;
-        color: #ffffff;
-        background: #302c42;
-      }
     }
-    
-    .home-page__arrow{
+    &:hover {
+      @include buttonHover();
+    }
+  }
+  .home-page__arrow {
+    display: none;
+    @include desktop {
       display: block;
       position: absolute;
       left: 55%;
       bottom: 2%;
     }
   }
-}
+
+  .home-page__description {
+    position: relative;
+    .home-page_vector4 {
+      display: none;
+      @include desktop {
+        @include vector(-19%, -25%, 300px, 700px);
+        display: block;
+      }
+    }
+  }
 }

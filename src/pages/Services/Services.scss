@@ -7,32 +7,56 @@
   z-index: 25;
 
   &__string {
-    position: absolute;
-    top: 11%;
-    left: 22%;
+    display: none;
+    @include desktop {
+      display: block;
+      position: absolute;
+      top: 11%;
+      left: 22%;
+    }
   }
   &__arrow {
-    position: absolute;
-    top: 62.5px;
-    left: 437px;
+    display: none;
+    @include desktop {
+      display: block;
+      position: absolute;
+      top: 62px;
+      left: 437px;
+    }
   }
- 
+
   .services-page__main {
-    display: flex;
-    justify-content: space-between;
-    text-align: left;
+    text-align: center;
+    @include desktop {
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+    }
+
     &_titles {
       .services-page__main_title {
-        @include title(36px);
+        @include title(26px);
+        @include desktop {
+          @include title(36px);
+        }
       }
       .services-page__main_subtitle {
-        @include subtitle(36px);
-        margin-top: 15px;
+        @include subtitle(26px);
+        margin: 16px auto 26px;
+        @include desktop {
+          @include subtitle(36px);
+          margin: 15px 0 0;
+        }
       }
     }
 
     &_description {
-      @include description(652px, 16px, 107px);
+      display: none;
+
+      @include desktop {
+        @include description(652px, 16px, 107px);
+        display: block;
+      }
     }
   }
 

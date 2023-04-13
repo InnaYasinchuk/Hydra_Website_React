@@ -1,14 +1,27 @@
 import React from "react";
 import "./Services.scss";
 import Service from "../../components/Service/Service";
-import { services } from "../../components/Service/ServeceList";
+import { services } from "../../components/Service/ServiceList";
 import { ServicesArrow, ServicesString } from "./svg";
+import Slider from "../../components/Slider/Slider";
+import { sliderPages } from "../../components/Slider/sliderSettings";
 
 const Services = () => {
+  const isMobile = window.innerWidth <= 768;
+
+  // if (isMobile) {
+  //   return (
+  //   <Slider settings={sliderPages} services={services} type='services' />
+  //   );
+  // } else {
   return (
     <section className="services-page">
-      <svg className="services-page__string"><ServicesString /></svg>
-      <svg className="services-page__arrow"><ServicesArrow /></svg>
+      <svg className="services-page__string">
+        <ServicesString />
+      </svg>
+      <svg className="services-page__arrow">
+        <ServicesArrow />
+      </svg>
       <div className="services-page__main">
         <div className="services-page__main_titles">
           <h1 className="services-page__main_title">WHY BUILD</h1>
@@ -22,17 +35,21 @@ const Services = () => {
           Lectus magna fringilla urna porttitor rhoncus vitae
         </p>
       </div>
-
-      <div className="services-page__cards">
-        {services.map((service) => (
-          <Service
-            key={service.id}
-            img={service.img}
-            title={service.title}
-            description={service.description}
-          />
-        ))}
-      </div>
+      {isMobile ? (
+        <Slider settings={sliderPages} services={services} type="services" />
+      ) : (
+        <div className="services-page__cards">
+          {services.map((service) => (
+            <Service
+              key={service.id}
+              img={service.img}
+              title={service.title}
+              description={service.description}
+              alt={service.alt}
+            />
+          ))}
+        </div>
+      )}
     </section>
   );
 };

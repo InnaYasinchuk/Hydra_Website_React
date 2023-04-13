@@ -8,15 +8,30 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-
+  @include desktop {
+    max-width: 1272px;
+    min-height: 756px;
+    margin: 40px auto;
+    flex-direction: row;
+    text-align: left;
+  }
   .about-first-blok {
+    position: relative;
+    
     &__title {
       @include title(26px);
       margin: 16px 0;
+      @include desktop {
+        @include title(36px);
+        margin: 10px 0;
+      }
     }
-
     &__subtitle {
       @include subtitle(26px);
+      @include desktop {
+        @include subtitle(36px);
+        margin-bottom: 32px;
+      }
     }
 
     &__img {
@@ -26,139 +41,89 @@
       margin: 36px 0 51px;
       z-index: 10;
       position: relative;
+      @include desktop {
+        max-width: 524px;
+        border-radius: 240px 100px;
+        margin: 65px 0 0 0;
+      }
     }
-    &__vector7,
-    &__vector8,
-    &__vectorString,
+    &__vector7 {
+      display: none;
+      @include desktop {
+        display: block;
+        @include vector(27%, -18%, 1440px, 100%);
+      }
+    }
+    &__vector8 {
+      display: none;
+      @include desktop {
+        display: block;
+        @include vector(67%, -9%, 1440px, 100%);
+      }
+    }
+    &__vectorString {
+      display: none;
+      @include desktop {
+        display: block;
+        @include vector(11%, 53%, 1440px, 100%);
+      }
+    }
     &__vectorArrow {
       display: none;
+      @include desktop {
+        display: block;
+        @include vector(67px, 434px, 1440px, 100%);
+      }
     }
   }
 
   .about-second-blok {
+    @include desktop {
+      min-height: 762px;
+    }
     &__description_top {
       display: none;
-    }
-    &__title {
-      display: none;
-    }
-    &__subtitle {
-      display: none;
-    }
-    &__description {
-      @include description(352px, 12px, 34px);
-      text-align: left;
-    }
-
-    &__button {
-      @include button(214px, 12px, 15px);
-      text-align: center;
-      margin: 0 auto;
-      z-index: 25;
-      position: relative;
-
-      &:hover {
-        border: 2px solid #ffffff;
-        padding: 15px 0px;
-        color: #ffffff;
-        background: #302c42;
-      }
-    }
-  }
-}
-
-@include desktop() {
-  .about {
-    max-width: 1272px;
-    min-height: 756px;
-    margin: 40px auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
-
-    .about-first-blok {
-      position: relative;
-      &__title {
-        @include title(36px);
-        margin: 10px 0;
-      }
-
-      &__subtitle {
-        @include subtitle(36px);
-        margin-bottom: 32px;
-      }
-
-      &__img {
-        max-width: 524px;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 240px 100px;
-        margin: 65px 0 0 0;
-      }
-      &__vector7,
-      &__vector8,
-      &__vectorString,
-      &__vectorArrow {
-        display: block;
-        position: absolute;
-        z-index: 2;
-        width: 1440px;
-        height: 100%;
-      }
-      &__vector7 {
-        top: 27%;
-        left: -18%;
-      }
-      &__vector8 {
-        top: 67%;
-        left: -9%;
-      }
-      &__vectorString {
-        top: 11%;
-        left: 53%;
-      }
-      &__vectorArrow {
-        top: 67px;
-        left: 434px;
-      }
-    }
-
-    .about-second-blok {
-      min-height: 762px;
-
-      &__description_top {
+      @include desktop {
         @include description(650px, 16px, 141px);
         display: block;
         margin-top: 10px;
       }
-
-      &__description {
-        @include description(630px, 16px, 28px);
-      }
-
-      &__title {
+    }
+    &__title {
+      display: none;
+      @include desktop {
         @include title(36px);
         margin: 10px 0;
         display: block;
       }
-
-      &__subtitle {
+    }
+    &__subtitle {
+      display: none;
+      @include desktop {
         @include subtitle(36px);
         margin-bottom: 32px;
         display: block;
       }
+    }
+    &__description {
+      @include description(352px, 12px, 34px);
+      text-align: left;
+      @include desktop {
+        @include description(630px, 16px, 28px);
+      }
+    }
 
-      &__button {
+    &__button {
+      @include button(276px, 14px, 17px);
+      text-align: center;
+      margin: 0 auto;
+      @include desktop {
         @include button(214px, 12px, 15px);
-        text-align: center;
         margin-left: 0;
+      }
 
-        &:hover {
-          border: 2px solid #ffffff;
-          padding: 15px 0px;
-          color: #ffffff;
-          background: #302c42;
-        }
+      &:hover {
+        @include buttonHover();
       }
     }
   }

@@ -11,7 +11,7 @@ const ContactsHome = () => {
 
   if (isMobile) {
     return (
-    <Slider settings={sliderHome} contacts={contacts} />
+    <Slider settings={sliderHome} contacts={contacts} type='contacts' />
     );
   } else {
     return (

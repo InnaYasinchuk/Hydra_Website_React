@@ -22,7 +22,7 @@
   display: block;
   width: $width;
   border: none;
-  border-radius: 40px;
+  border-radius: $borderRadius;
   padding: 17px 0px;
   text-transform: uppercase;
   font-family: "Montserrat";
@@ -33,26 +33,44 @@
   line-height: $l-height;
   color: #343045;
   background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
+  position: relative;
+  z-index: 50;
+}
+
+@mixin buttonHover(){
+  border: 2px solid $mainColor;
+  padding: 16px 0px;
+  color: $mainColor;
+  background: #302c42;
 }
 
 @mixin title($f-size) {
   font-weight: 700;
   font-size: $f-size;
   line-height: 122%;
-  color: #ffffff;
+  color: $mainColor;
 }
 
 @mixin subtitle($f-size) {
   font-weight: 300;
   font-size: $f-size;
   line-height: 122%;
-  color: #ffffff;
+  color: $mainColor;
 }
 
 @mixin description($max-width, $f-size, $marg-bot) {
   font-size: $f-size;
   line-height: 155%;
-  color: #ffffff;
+  color: $mainColor;
   max-width: $max-width;
   margin-bottom: $marg-bot;
+}
+
+@mixin vector ($top, $left, $width, $height){
+  position: absolute;
+  z-index: 2;
+  top: $top;
+  left:$left;
+  width: $width;
+  height: $height;
 }

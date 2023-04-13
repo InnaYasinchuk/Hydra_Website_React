@@ -1,8 +1,16 @@
-.swiper-home{
+// home page
+
+.swiper-home {
   display: flex;
   justify-content: space-between;
-  width: 347px;
-  background: radial-gradient(50% 2900.76% at 50% 53.89%, rgba(58, 52, 86, 0.95) 0%, #211E2E 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  max-width: 347px;
+  min-height: 109px;
+  background: radial-gradient(
+      50% 2900.76% at 50% 53.89%,
+      rgba(58, 52, 86, 0.95) 0%,
+      #211e2e 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
   box-shadow: 0px 4px 4px rgba(192, 183, 232, 0.01);
   border-radius: 90px;
   align-items: center;
@@ -11,24 +19,94 @@
   position: relative;
   z-index: 25;
 
-  .swiper-button-prev-home{
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: 35%;
-  left: 2%;
-  z-index: 26;
-  
- 
+  .swiper-button-prev-home {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 40%;
+    left: 2%;
+    z-index: 26;
   }
 
-  .swiper-button-next-home{
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: 35%;
-  right: 2%;
-  z-index: 26;
- 
+  .swiper-button-next-home {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 40%;
+    right: 0%;
+    z-index: 26;
+  }
+}
+
+// other pages
+
+.swiper-pages {
+  max-width: 400px;
+  min-height: 510px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 25;
+
+  .swiper-circle-max-left {
+    width: 62px;
+    height: 62px;
+    background: rgba(14, 14, 14, 0.32);
+    position: absolute;
+    z-index: 30;
+    border-radius: 50%;
+    left: 4%;
+    top: 38%;
+
+    .swiper-circle-mini-left {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(267.61deg, #c0b7e8 -0.6%, #8176af 98.31%);
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      .swiper-button-prev {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 30%;
+        top: 81%;
+        opacity: 1;
+        z-index: 35;
+      }
+    }
+  }
+
+  .swiper-circle-max-right {
+    width: 62px;
+    height: 62px;
+    background: rgba(14, 14, 14, 0.32);
+    position: absolute;
+    z-index: 30;
+    border-radius: 50%;
+    left: 81%;
+    top: 38%;
+
+    .swiper-circle-mini-right {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(267.61deg, #c0b7e8 -0.6%, #8176af 98.31%);
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      .swiper-button-next {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 38%;
+        top: 81%;
+        opacity: 1;
+        z-index: 35;
+      }
+    }
   }
 }

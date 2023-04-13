@@ -1,15 +1,23 @@
 @import "../../_mixins";
+@import "../../variables";
 
 .service-card{
   width: 310px;
+  height: 520px;
+  margin: 0 auto;
   background: radial-gradient(50% 50% at 50% 50%, #433D60 0%, #211E2E 100%);
-  border-radius: 40px;
+  border-radius: $borderRadius;
   align-items: center;
+  align-content: space-between;
+  padding: 10px;
+    @include desktop{
+      height: 510px;
+  }
 
   &__border{
     max-width: 219px;
     min-height: 219px;
-    margin: 23px auto;
+    margin: 13px auto 21px;
     position: relative;
     background: rgba(14, 14, 14, 0.32);
     border-radius: 50%;
@@ -24,7 +32,7 @@
     }
     .service-card__vector{
       position: absolute;
-      bottom: -101%;
+      bottom: -99%;
       left: 14%;
     }
   }
@@ -41,15 +49,14 @@
   }
 
   &__button{
-    @include button(154px, 12px, 15px);
-    margin: 0 auto 40px;
-    position: relative;
-    z-index: 25;
+    @include button(250px, 14px, 17px);
+    margin: 0 auto 30px;
+    @include desktop{
+       @include button(154px, 12px, 15px);
+       margin: 0 auto;
+    }
     &:hover {
-        border: 2px solid #ffffff;
-        padding: 16px 0px;
-        color: #ffffff;
-        background: transparent;
+       @include buttonHover()
       }
   }
 }
