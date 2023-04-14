@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import "swiper/scss";
 import "swiper/scss/navigation";
-import "./Slider.scss";
+import "./Slider.scss"
 import Contact from "../Contact/Contact";
 import Service from "../Service/Service";
 
