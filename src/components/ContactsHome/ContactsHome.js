@@ -5,6 +5,7 @@ import { SliderSeparator1, SliderSeparator2 } from "./svg";
 import Contact from "../Contact/Contact";
 import Slider from "../Slider/Slider";
 import { sliderHome } from "../Slider/sliderSettings";
+import "../Slider/Slider.scss";
 
 const ContactsHome = () => {
   const isMobile = window.innerWidth <= 768;
