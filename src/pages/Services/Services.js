@@ -2,22 +2,17 @@ import React from "react";
 import "./Services.scss";
 import Service from "../../components/Service/Service";
 import { services } from "../../components/Service/ServiceList";
-import { ServicesArrow, ServicesString } from "./svg";
+import { ServicesArrow, ServicesLine } from "./svg";
 import Slider from "../../components/Slider/Slider";
 import { sliderPages } from "../../components/Slider/sliderSettings";
 
 const Services = () => {
   const isMobile = window.innerWidth <= 768;
 
-  // if (isMobile) {
-  //   return (
-  //   <Slider settings={sliderPages} services={services} type='services' />
-  //   );
-  // } else {
   return (
     <section className="services-page">
       <svg className="services-page__string">
-        <ServicesString />
+        <ServicesLine />
       </svg>
       <svg className="services-page__arrow">
         <ServicesArrow />

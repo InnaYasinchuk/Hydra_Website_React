@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import './Service.scss'
+import './Service.scss';
 import { ServiceV } from "./svg";
 
 const Service = ({img, alt, title, description}) => {

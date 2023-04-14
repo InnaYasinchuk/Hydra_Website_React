@@ -1,6 +1,6 @@
 import React from "react";
 
-export const ServicesString = () => (
+export const ServicesLine = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="158" height="4" viewBox="0 0 158 4" fill="none">
   <path d="M157.5 2H0" stroke="#C0B7E8" stroke-width="3"/>
   </svg>
