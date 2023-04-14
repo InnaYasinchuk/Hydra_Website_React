@@ -6,6 +6,7 @@ import "swiper/scss/navigation";
 import "./Slider.scss"
 import Contact from "../Contact/Contact";
 import Service from "../Service/Service";
+import "../../components/Slider/Slider.scss"
 
 const Slider = ({ type, contacts, settings, services }) => {
   let slides = null;
