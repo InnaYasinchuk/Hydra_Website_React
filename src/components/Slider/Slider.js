@@ -5,7 +5,6 @@ import "swiper/scss";
 import "swiper/scss/navigation";
 import Contact from "../Contact/Contact";
 import Service from "../Service/Service";
-
 import "./Slider.scss";
 
 
