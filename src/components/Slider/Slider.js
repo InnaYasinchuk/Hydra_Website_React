@@ -1,14 +1,17 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Navigation} from "swiper";
+
 import "swiper/scss";
 import "swiper/scss/navigation";
-import Contact from "../Contact/Contact";
-import Service from "../Service/Service";
 import "./Slider.scss";
 
+import Contact from "../Contact/Contact";
+import Service from "../Service/Service";
+import HowCard from "../HowCard/HowCard";
 
-const Slider = ({ type, contacts, settings, services }) => {
+
+const Slider = ({ type, contacts, settings, services, howCards}) => {
   let slides = null;
 
   switch (type) {
@@ -37,6 +40,16 @@ const Slider = ({ type, contacts, settings, services }) => {
         </SwiperSlide>
       ));
       break;
+       case "howTo":
+      slides = howCards.map((howCard) => (
+        <SwiperSlide key={howCard.id}>
+          <HowCard
+            number={howCard.number}
+            description={howCard.description}
+          />
+        </SwiperSlide>
+      ));
+      break;
     default:
       slides = null;
   }
@@ -46,6 +59,7 @@ const Slider = ({ type, contacts, settings, services }) => {
       modules={[Navigation]}
       spaceBetween={settings.spaceBetween}
       slidesPerView={1}
+      pagination={false }
       navigation={{
         prevEl: settings.prevEl,
         nextEl: settings.nextEl,

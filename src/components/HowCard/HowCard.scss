@@ -1,0 +1,73 @@
+@import "../../_mixins";
+
+.howto-card {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+
+  .border-max {
+    margin: 15px auto;
+    width: 198px;
+    height: 198px;
+    border-radius: 50%;
+    background: rgba(13, 13, 13, 0.32);
+    position: relative;
+    z-index: 15;
+
+    .border-min {
+      width: 159px;
+      height: 159px;
+      border-radius: 50%;
+      background: linear-gradient(251.27deg, #c0b7e8 12.87%, #8176af 89.33%);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .number-card {
+      font-weight: 700;
+      font-size: 64px;
+      line-height: 78px;
+      color: #343045;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .howto-card__description {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    @include desktop {
+      max-width: 235px;
+      display: flex;
+      justify-content: center;
+    }
+
+    &_title {
+      margin: 0 auto;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 29px;
+      text-align: center;
+      color: #ffffff;
+      max-width: 187px;
+
+      @include desktop {
+        text-align: left;
+      }
+    }
+
+    .arrow {
+      display: none;
+      @include desktop {
+        display: block;
+        margin-right: 15px;
+        width: 50px;
+        
+      }
+    }
+  }
+}

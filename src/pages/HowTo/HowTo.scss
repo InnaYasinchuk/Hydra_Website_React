@@ -1,0 +1,80 @@
+@import "../../_mixins";
+
+.howTo-page {
+  max-width: 1270px;
+  margin: 50px auto;
+  position: relative;
+  z-index: 25;
+
+  @include desktop{
+    margin: 100px auto 250px;
+  }
+  .howTo-page_vector{
+    display: none;
+    @include desktop{
+      display: block;
+      @include vector(46%, -2%, 1440px, 100%);
+    }
+  }
+
+  .howTo-page__main {
+    text-align: center;
+    @include desktop {
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &_titles {
+      position: relative;
+
+      
+ .howTo-page__string {
+    display: none;
+    @include desktop {
+      display: block;
+      position: absolute;
+      top: 40%;
+      left: 104%;
+    }
+  }
+  .howTo-page__arrow {
+    display: none;
+    @include desktop {
+      display: block;
+      position: absolute;
+      top: 66px;
+      left: 488px;
+    }
+  }
+      .howTo-page__main_title {
+        @include title(26px);
+        @include desktop {
+          @include title(36px);
+        }
+      }
+      .howTo-page__main_subtitle {
+        @include subtitle(26px);
+        margin: 16px auto 26px;
+        @include desktop {
+          @include subtitle(36px);
+          margin: 15px 0 0;
+        }
+      }
+    }
+
+    &_description {
+      display: none;
+
+      @include desktop {
+        @include description(652px, 16px, 107px);
+        display: block;
+      }
+    }
+  }
+
+  .howTo-page__cards {
+    display: flex;
+    justify-content: space-between;
+  }
+}
