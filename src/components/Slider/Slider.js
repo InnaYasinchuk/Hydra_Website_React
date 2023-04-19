@@ -9,9 +9,10 @@ import "./Slider.scss";
 import Contact from "../Contact/Contact";
 import Service from "../Service/Service";
 import HowCard from "../HowCard/HowCard";
+import TechnologiesCard from "../TechnologiesCard/TechnologiesCard";
 
 
-const Slider = ({ type, contacts, settings, services, howCards}) => {
+const Slider = ({ type, contacts, settings, services, howCards, technologiesCards}) => {
   let slides = null;
 
   switch (type) {
@@ -50,6 +51,16 @@ const Slider = ({ type, contacts, settings, services, howCards}) => {
         </SwiperSlide>
       ));
       break;
+      case "technologies":
+      slides = technologiesCards.map((technologiesCard) => (
+        <SwiperSlide key={technologiesCard.id}>
+          <TechnologiesCard
+            img={technologiesCard.img}
+            alt={technologiesCard.alt}
+          />
+        </SwiperSlide>
+      ));
+      break;
     default:
       slides = null;
   }
@@ -59,7 +70,6 @@ const Slider = ({ type, contacts, settings, services, howCards}) => {
       modules={[Navigation]}
       spaceBetween={settings.spaceBetween}
       slidesPerView={1}
-      pagination={false }
       navigation={{
         prevEl: settings.prevEl,
         nextEl: settings.nextEl,

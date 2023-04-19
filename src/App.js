@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
 import Services from "./pages/Services/Services";
 import About from "./pages/About/About";
-import Technologies from "./pages/Technologies";
+import Technologies from "./pages/Technologies/Technologies";
 import HowTo from "./pages/HowTo/HowTo";
 import Join from "./pages/Join/Join";
 import Footer from "./components/Footer/Footer";

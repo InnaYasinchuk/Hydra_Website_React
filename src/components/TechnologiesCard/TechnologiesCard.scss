@@ -1,0 +1,21 @@
+@import "../../_mixins";
+
+.image-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px auto;
+
+  .technologies_item {
+    max-width: 240px;
+    transition: transform 1s ease;
+    
+    @include desktop {
+      max-width: 282px;
+    }
+  }
+
+  .technologies_item:hover {
+    transform: rotate(360deg);
+  }
+}

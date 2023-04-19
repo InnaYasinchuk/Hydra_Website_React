@@ -13,7 +13,7 @@ const Home = () => {
     <div className="home">
       <section className="home-page">
         <div className="home-page__border">
-          <img className="home-page__image" src={mainImage} alt="virtual"></img>
+          <img className="home-page__image" src={mainImage} alt="virtual" loading="lazy"></img>
           <svg className="home-page_vector1"><HomeV1 /></svg>
           <svg className="home-page_vector2"><HomeV2 /></svg>
           <svg className="home-page_vector3"><HomeV3 /></svg>

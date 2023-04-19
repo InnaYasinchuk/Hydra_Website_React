@@ -11,7 +11,7 @@ const About = () => {
       <div className="about-first-blok">
         <h1 className="about-first-blok__title">INTRODUCTION</h1>
         <h2 className="about-first-blok__subtitle">TO HYDRA VR</h2>
-        <img src={aboutImg} alt="man" className="about-first-blok__img"></img>
+        <img src={aboutImg} alt="man" className="about-first-blok__img" loading="lazy"></img>
         <svg className="about-first-blok__vector7"><AboutV7 /></svg>
         <svg className="about-first-blok__vector8"><AboutV8 /></svg>
         <svg className="about-first-blok__vectorString"><AboutString /></svg>
