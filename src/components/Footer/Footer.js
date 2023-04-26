@@ -15,9 +15,7 @@ const Footer = () => {
     <svg className="footer_vector20"><FooterV20 /></svg>
     <svg className="footer_vector21"><FooterV21 /></svg>
     <svg className="footer_vector22"><FooterV22 /></svg>
-    
-
-
+   
     <section className="footer-section">
       <NavLink to='/' className="footer-section__logo" target='_top'><FooterLogo /></NavLink> 
       <div className="footer-section__services">

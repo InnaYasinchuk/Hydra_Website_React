@@ -13,6 +13,9 @@
     background: rgba(13, 13, 13, 0.32);
     position: relative;
     z-index: 15;
+    &:hover {
+        transform: scale(1.1);
+      }
 
     .border-min {
       width: 159px;

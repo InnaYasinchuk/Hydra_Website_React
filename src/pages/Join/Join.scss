@@ -1,4 +1,5 @@
 @import "../../_mixins";
+@import "../../_variables";
 
 .join {
   max-width: 1275px;
@@ -10,49 +11,111 @@
   border-radius: 40px;
   position: relative;
   z-index: 25;
+  @include desktop {
+    margin: 30px 84px;
+    padding: 90px 102px 84px;
+    border-radius: 100px;
+  }
 
-  .join-mobile-vector{
+  .join-mobile-vector {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 9%;
     left: 33%;
+    z-index: -2;
+  }
+  .join-desktop-vector {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 15%;
+    left: 33%;
+    z-index: -2;
   }
 
   &__title {
     @include title(24px);
+    @include desktop {
+      @include title(36px);
+    }
   }
 
   &__subtitle {
     @include subtitle(24px);
     margin: 40px auto 36px;
+    @include desktop {
+      @include subtitle(36px);
+      margin: 51px auto 65px;
+    }
   }
 
   &__form {
     .join__form__input,
+    .join__form__input_subject,
     .join__form__input_area {
       min-width: 300px;
       padding: 18px 29px;
       margin-bottom: 22px;
-      border: 2px solid #ffffff;
+      border: 2px solid $mainColor;
       border-radius: 40px;
       background-color: transparent;
-
+      color: $mainColor;
+      @include desktop {
+        width: 520px;
+        padding: 27px 42px;
+        margin: 18px 5px;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        border: 4px solid $activeColor;
+        padding: 16px 28px;
+        outline: none;
+        @include desktop {
+          padding: 24px 40px;
+        }
+        &::placeholder {
+          color: $activeColor;
+        }
+      }
       &::placeholder {
         font-size: 14px;
         line-height: 17px;
-        color: #ffffff;
+        color: $mainColor;
       }
     }
+    .join__form__input_subject {
+      @include desktop {
+        width: 1058px;
+      }
+    }
+
     .join__form__input_area {
       min-height: 219px;
       resize: none;
+      
+            &::placeholder {
+        font-size: 14px;
+        line-height: 17px;
+        color: $mainColor;
+        
+      }
+   
+      @include desktop {
+        width: 1058px;
+        min-height: 210px;
+      }
     }
-    .join__form__button{
+    .join__form__button {
       @include button(292px, 14px, 17px);
       margin: 52px auto;
       position: relative;
       z-index: 25;
+      @include desktop {
+        @include button(292px, 14px, 17px);
+        margin: 51px auto 0;
+      }
 
       &:hover {
         border: 2px solid #ffffff;
@@ -62,53 +125,46 @@
       }
     }
   }
-}
-
-@include desktop(){
-  
-.join {
-  margin: 30px 84px;
-  padding: 90px 102px 84px;
-  border-radius: 100px;
-
-   .join-desktop-vector{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 15%;
-    left: 33%;
-  }
-
-  &__title {
-    @include title(36px);
-  }
-
-  &__subtitle {
-    @include subtitle(36px);
-    margin: 51px auto 65px;
-  }
-
-  &__form {
-    .join__form__input,
-    .join__form__input_area {
+  .invalid, .invalid_subject, .invalid_area {
+    min-width: 300px;
+    padding: 16px 28px;
+    margin-bottom: 22px;
+    border: 3px solid red;
+    border-radius: 40px;
+    background-color: transparent;
+    color: red;
+    &:hover,
+    &:active,
+    &:focus {
+      border: 4px solid $activeColor;
+      padding: 16px 28px;
+      outline: none;
+      &::placeholder {
+        color: $activeColor;
+      }
+    }
+    @include desktop {
       width: 520px;
-      padding: 27px 42px;
+      padding: 25px 42px;
       margin: 18px 5px;
-     
-    }
-    .join__form__input_area {
-      width: 1058px;
-      min-height: 210px;
-      resize: none;
-    }
-    .subject{
-      width: 1058px;
-    }
-    .join__form__button{
-      @include button(292px, 14px, 17px);
-      margin: 51px auto 0;
+      &:hover,
+      &:active,
+      &:focus {
+        padding: 24px 40px;
+      }
     }
   }
-}
-
+  .invalid_subject{
+ @include desktop {
+        width: 1058px;
+      }
+  }
+  .invalid_area{
+     min-height: 219px;
+      resize: none;
+      @include desktop {
+        width: 1058px;
+        min-height: 210px;
+      }
+  }
 }

@@ -9,13 +9,13 @@
   .technologies_item {
     max-width: 240px;
     transition: transform 1s ease;
+    &:hover{
+      transform: rotate(360deg);
+    }
     
     @include desktop {
       max-width: 282px;
     }
   }
 
-  .technologies_item:hover {
-    transform: rotate(360deg);
-  }
-}
+ }
