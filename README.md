@@ -1,4 +1,4 @@
-Website is hosted at https://gydra-virtual-reality.netlify.app/
+Website is hosted at: https://hydra-vr-virtual-reality.netlify.app/
 
 
 
