@@ -167,4 +167,33 @@
         min-height: 210px;
       }
   }
+  .join__success {
+    // width: 380px;
+    // height: 100px;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  
+  z-index: 9999;
+}
+
+.join__success p {
+  width: 350px;
+  background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
+  border-radius: $borderRadius;
+ padding: 25px;
+ font-weight: 700;
+font-size: 15px;
+ color: #343045;
+ @include desktop{
+  width: 500px;
+  font-size: 20px;
+ }
+}
 }

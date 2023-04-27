@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Formik, Form, Field } from "formik";
+import axios from 'axios';
 import validateForm from "./formValidation.js";
 
 import "./Join.scss";
@@ -7,6 +8,29 @@ import { JoinDesktop, JoinMobile } from "./svg";
 
 const Join = () => {
   const isMobile = window.innerWidth <= 768;
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+
+useEffect(() => {
+    let timeoutId;
+    if (isFormSubmitted) {
+      timeoutId = setTimeout(() => {
+        setIsFormSubmitted(false);
+      }, 3500);
+    }
+    return () => clearTimeout(timeoutId);
+  }, [isFormSubmitted]);
+
+
+  const onSubmit = async (values, { resetForm }) => {
+    try {
+      const response = await axios.post('http://localhost:4000/send-email', values);
+      console.log(response.data);
+      setIsFormSubmitted(true);
+      resetForm();
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <section className="join">
@@ -30,9 +54,7 @@ const Join = () => {
           subject: "",
           about: "",
         }}
-        onSubmit={(values) => {
-          console.log(values);
-        }}
+        onSubmit={onSubmit}
       >
         {({ errors, touched }) => (
           <Form className="join__form">
@@ -81,6 +103,11 @@ const Join = () => {
           </Form>
         )}
       </Formik>
+      {isFormSubmitted && (
+  <div className="join__success">
+    <p>Form successfully submitted!</p>
+  </div>
+)}
     </section>
   );
 };
