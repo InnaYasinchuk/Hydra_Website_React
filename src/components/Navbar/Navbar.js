@@ -21,12 +21,12 @@ const isMobile = window.innerWidth <= 768;
           <li><NavLink to='/technologies' className={({isActive}) => isActive ? "header-menu__link__active" : "header-menu__link"} onClick={() =>{ if(isMobile) {setBurger(!burger)}}} >Technologies</NavLink></li>
           <li><NavLink to='/how_to' className={({isActive}) => isActive ? "header-menu__link__active" : "header-menu__link"} onClick={() =>{ if(isMobile) {setBurger(!burger)}}} >How to</NavLink></li>
         {isMobile ? <li><NavLink to='tel:%2B11011111010' className={({isActive}) => isActive ? "header-menu__link__active" : "header-menu__link"} onClick={() =>{ if(isMobile) {setBurger(!burger)}}}>Contact us</NavLink></li> : ''}
-        {isMobile ? <li><NavLink to='/join' className={({isActive}) => isActive ? "header-menu__link__active" : "header-menu__link"} onClick={() =>{ if(isMobile) {setBurger(!burger)}}}>Join Gidra</NavLink></li> : ''}
+        {isMobile ? <li><NavLink to='/join' className={({isActive}) => isActive ? "header-menu__link__active" : "header-menu__link"} onClick={() =>{ if(isMobile) {setBurger(!burger)}}}>Join Hydra</NavLink></li> : ''}
         </ul>
       </nav>
         <ul className="navbar-button">
           <li><NavLink to='tel:%2B11011111010' className="navbar-button__button">Contact us</NavLink></li>
-          <li><NavLink to='/join' className="navbar-button__button">Join Gidra</NavLink></li>
+          <li><NavLink to='/join' className="navbar-button__button">Join Hydra</NavLink></li>
         </ul>
         <button onClick={() => setBurger(!burger)} className={burger ? "burger-menu_open" : "burger-menu" } >
           <span></span></button>

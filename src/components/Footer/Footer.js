@@ -24,7 +24,7 @@ const Footer = () => {
           <li><NavLink to='/services' className={({isActive}) => isActive ? "footer-menu__link_active" : "footer-menu__link" } target='_top' >Services</NavLink></li>
           <li><NavLink to='/technologies' className={({isActive}) => isActive ? "footer-menu__link_active" : "footer-menu__link"} target='_top'>Technologies</NavLink></li>
           <li><NavLink to='/how_to' className={({isActive}) => isActive ? "footer-menu__link_active" : "footer-menu__link"} target='_top'>How to</NavLink></li>
-          <li><NavLink to='/join' className={({isActive}) => isActive ? "footer-menu__link_active" : "footer-menu__link"} target='_top'>Join Gidra</NavLink></li>
+          <li><NavLink to='/join' className={({isActive}) => isActive ? "footer-menu__link_active" : "footer-menu__link"} target='_top'>Join Hydra</NavLink></li>
       </ul>
       </div>
       <div className="footer-section__info">
