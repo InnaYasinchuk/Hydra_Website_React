@@ -23,7 +23,7 @@ useEffect(() => {
 
   const onSubmit = async (values, { resetForm }) => {
     try {
-      const response = await axios.post('https://stalwart-platypus-0713de.netlify.app/send-email', values);
+      const response = await axios.post('https://remarkable-tiramisu-3e73eb.netlify.app/send-email', values);
       console.log(response.data);
       setIsFormSubmitted(true);
       resetForm();
