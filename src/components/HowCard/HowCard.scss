@@ -13,6 +13,25 @@
     background: rgba(13, 13, 13, 0.32);
     position: relative;
     z-index: 15;
+     animation-name: border-spring;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 3;
+@keyframes border-spring {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+
     &:hover {
         transform: scale(1.1);
       }

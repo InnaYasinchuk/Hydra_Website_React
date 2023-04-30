@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import { gsap } from "gsap";
 import './Footer.scss';
 import { FooterFacebook, FooterInstagram, FooterLinkedin, FooterLogo, FooterPinterest, FooterTwitter, FooterV17, FooterV18, FooterV19, FooterV20, FooterV21, FooterV22, FooterYoutube } from "./svg";
 
 const Footer = () => {
 
   const isMobile = window.innerWidth <= 768;
+  const logoRefFooter = useRef(null);
+
+  useEffect(() => {
+    const logoFooter = logoRefFooter.current.querySelector('.footer-section__logo svg');
+    gsap.to(logoFooter, {
+      rotation: 360,
+      duration: 20,
+      ease: "none",
+      repeat: -1
+    });
+  }, []);
 
   return ( 
   <footer className="footer">
@@ -17,7 +29,9 @@ const Footer = () => {
     <svg className="footer_vector22"><FooterV22 /></svg>
    
     <section className="footer-section">
-      <NavLink to='/' className="footer-section__logo" target='_top'><FooterLogo /></NavLink> 
+      <NavLink to='/'> 
+      <span className="footer-section__logo" target='_top' ref={logoRefFooter}><FooterLogo /></span>
+      </NavLink> 
       <div className="footer-section__services">
         <ul className="footer-menu">
           <li><NavLink to='/about'className={({isActive}) => isActive ? "footer-menu__link_active" : "footer-menu__link"} target='_top' >About</NavLink></li>
@@ -37,13 +51,13 @@ const Footer = () => {
       </div>
       <div className="footer-section__social">
         <h3 className="social_title">SOCIALIZE WITH HYDRA</h3>
-        <div className="social_items">
-          <FooterFacebook />
-          <FooterTwitter />
-          <FooterLinkedin />
-          <FooterYoutube />
-          <FooterInstagram />
-          <FooterPinterest />
+        <div className="social__items">
+          <svg className="social__items_item"><FooterFacebook /></svg>
+          <svg className="social__items_item"><FooterTwitter /></svg>
+          <svg className="social__items_item"><FooterLinkedin /></svg>
+          <svg className="social__items_item"><FooterYoutube /></svg>
+          <svg className="social__items_item"><FooterInstagram /></svg>
+          <svg className="social__items_item"><FooterPinterest /></svg>
         </div>
         <NavLink to="/services" className="social_button">Build your world</NavLink>
       </div>

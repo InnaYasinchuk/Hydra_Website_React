@@ -35,9 +35,11 @@
   background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
   position: relative;
   z-index: 50;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
 }
 
-@mixin buttonHover(){
+@mixin buttonHover() {
   border: 2px solid $mainColor;
   padding: 16px 0px;
   color: $mainColor;
@@ -49,6 +51,19 @@
   font-size: $f-size;
   line-height: 122%;
   color: $mainColor;
+  animation-name: title-in-left;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  @keyframes title-in-left {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 }
 
 @mixin subtitle($f-size) {
@@ -56,6 +71,19 @@
   font-size: $f-size;
   line-height: 122%;
   color: $mainColor;
+  animation-name: subtitle-in-left;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  @keyframes subtitle-in-left {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 }
 
 @mixin description($max-width, $f-size, $marg-bot) {
@@ -66,11 +94,26 @@
   margin-bottom: $marg-bot;
 }
 
-@mixin vector ($top, $left, $width, $height){
+@mixin vector($top, $left, $width, $height) {
   position: absolute;
   z-index: 2;
   top: $top;
-  left:$left;
+  left: $left;
   width: $width;
   height: $height;
+}
+
+@mixin link-decoration_after() {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background-color: $mainColor;
+  transition: width 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+@mixin link-decoration_hover_after() {
+  width: 120%;
 }

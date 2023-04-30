@@ -1,4 +1,5 @@
 @import "../../_mixins";
+@import "../../variables";
 
 .header {
   display: flex;
@@ -9,6 +10,9 @@
   padding: 25px 20px;
   position: relative;
   z-index: 40;
+  @include desktop {
+    padding: 50px 84px;
+  }
 
   .header-menu {
     .header-menu-list {
@@ -25,7 +29,20 @@
       right: 0;
       z-index: 40;
       transition: left 1s;
-      background-color: #302c42;
+      background-color: transparent;
+      @include desktop {
+        width: auto;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-between;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        width: auto;
+        position: static;
+        transition: none;
+      }
 
       .header-menu__link {
         display: block;
@@ -34,19 +51,42 @@
         font-weight: 700;
         font-size: 15px;
         line-height: 15px;
-        color: #ffffff;
-        &:hover {
-          text-decoration: underline;
+        color: $mainColor;
+        position: relative;
+        @include desktop {
+          
+          font-size: 12px;
+          line-height: 15px;
         }
       }
+      .header-menu__link::after {
+        @include link-decoration_after();
+      }
+
+      .header-menu__link:hover::after {
+        @include link-decoration_hover_after();
+      }
+
       .header-menu__link__active {
         display: block;
         text-transform: uppercase;
         font-weight: 700;
         font-size: 15px;
         line-height: 15px;
-        color: #c0b7e8;
+        color: $activeColor;
         text-decoration: none;
+        position: relative;
+        @include desktop{
+          font-size: 12px;
+        }
+      }
+      .header-menu__link__active::after {
+        @include link-decoration_after();
+        background-color: $activeColor;
+      }
+
+      .header-menu__link__active:hover::after {
+        @include link-decoration_hover_after();
       }
     }
     .header-menu-list_active {
@@ -63,6 +103,9 @@
       transition: left 1s;
       z-index: 40;
       background-color: #302c42;
+      @include desktop{
+         display: none;
+      }
 
       .header-menu__link {
         display: block;
@@ -71,11 +114,17 @@
         font-weight: 700;
         font-size: 15px;
         line-height: 15px;
-        color: #ffffff;
-        &:hover {
-          text-decoration: underline;
-        }
+        color: $mainColor;
+        position: relative;
+       }
+       .header-menu__link::after {
+        @include link-decoration_after();
       }
+
+      .header-menu__link:hover::after {
+        width: 130px;
+      }
+
       .header-menu__link__active {
         display: block;
         text-transform: uppercase;
@@ -84,12 +133,37 @@
         line-height: 15px;
         color: #c0b7e8;
         text-decoration: none;
+        position: relative;
+      }
+      .header-menu__link__active::after {
+        @include link-decoration_after();
+        background-color: $activeColor;
+      }
+
+      .header-menu__link__active:hover::after {
+       width: 130px;
       }
     }
   }
 
   .navbar-button {
     display: none;
+    @include desktop{
+      list-style: none;
+      display: flex;
+      position: static;
+      z-index: 40;
+       &__button {
+        @include button(155px, 12px, 15px);
+        margin-left: 45px;
+      }
+      &__button:hover {
+        border: 2px solid $mainColor;
+        padding: 15px 0px;
+        color: $mainColor;
+        background: #302c42;
+      }
+    }
   }
 
   .burger-menu {
@@ -101,6 +175,9 @@
     border: none;
     cursor: pointer;
     z-index: 40;
+    @include desktop{
+      display: none;
+    }
 
     & span,
     &::before,
@@ -172,76 +249,3 @@
   }
 }
 
-@include desktop() {
-  .header {
-    padding: 50px 84px;
-
-    .header-menu {
-      .header-menu-list {
-        width: auto;
-        height: auto;
-        list-style: none;
-        display: flex;
-        flex-direction: row;
-        gap: 42px;
-        justify-content: space-between;
-        top: auto;
-        bottom: auto;
-        left: auto;
-        right: auto;
-        width: auto;
-        position: static;
-        transition: none;
-
-        .header-menu__link {
-          display: block;
-          text-transform: uppercase;
-          text-decoration: none;
-          font-weight: 700;
-          font-size: 12px;
-          line-height: 15px;
-          color: #ffffff;
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-
-        .header-menu__link__active {
-          display: block;
-          text-transform: uppercase;
-          font-weight: 700;
-          font-size: 12px;
-          line-height: 15px;
-          color: #c0b7e8;
-          text-decoration: none;
-        }
-      }
-
-      .header-menu-list_active {
-        display: none;
-      }
-    }
-
-    .navbar-button {
-      list-style: none;
-      display: flex;
-      position: static;
-      z-index: 40n;
-
-      &__button {
-        @include button(155px, 12px, 15px);
-        margin-left: 45px;
-      }
-      &__button:hover {
-        border: 2px solid #ffffff;
-        padding: 15px 0px;
-        color: #ffffff;
-        background: #302c42;
-      }
-    }
-
-    .burger-menu {
-      display: none;
-    }
-  }
-}

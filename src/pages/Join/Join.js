@@ -10,6 +10,7 @@ const Join = () => {
   const isMobile = window.innerWidth <= 768;
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
+
 useEffect(() => {
     let timeoutId;
     if (isFormSubmitted) {
@@ -23,7 +24,8 @@ useEffect(() => {
 
   const onSubmit = async (values, { resetForm }) => {
     try {
-      const response = await axios.post('https://remarkable-tiramisu-3e73eb.netlify.app/send-email', values);
+      const response = await axios.post('http://localhost:4000/send-email', values);
+       
       console.log(response.data);
       setIsFormSubmitted(true);
       resetForm();

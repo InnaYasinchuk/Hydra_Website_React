@@ -28,7 +28,7 @@ export const FooterV17 = () => (
 
 export const FooterV18 = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="270" viewBox="0 0 1440 270" fill="none">
-  <path d="M1439.5 3C1315.17 14.3333 1084.71 109.757 957 215C795 348.5 543.167 194 391 97C283.5 30 55.3 -36.3 2.5 234.5" stroke="url(#paint0_linear_13_65)" stroke-opacity="0.13" stroke-width="6"/>
+  <path d="M1439.5 3C1315.17 14.3333 1084.71 109.757 957 215C795 348.5 543.167 194 391 97C283.5 30 55.3 -36.3 2.5 234.5" stroke="url(#paint0_linear_13_65)" strokeOpacity="0.13" strokeWidth="6"/>
   <defs>
   <linearGradient id="paint0_linear_13_65" x1="1439.5" y1="3.63123" x2="2.5" y2="3.63112" gradientUnits="userSpaceOnUse">
   <stop stopColor="#343045"/>
@@ -42,7 +42,7 @@ export const FooterV18 = () => (
 
 export const FooterV19 = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="1439" height="368" viewBox="0 0 1439 368" fill="none">
-  <path d="M3.5 366C45.3333 297.5 213.9 191.2 553.5 314C893.1 436.8 1285 157.833 1438.5 3" stroke="url(#paint0_linear_13_66)" stroke-opacity="0.13" stroke-width="6"/>
+  <path d="M3.5 366C45.3333 297.5 213.9 191.2 553.5 314C893.1 436.8 1285 157.833 1438.5 3" stroke="url(#paint0_linear_13_66)" strokeOpacity="0.13" strokeWidth="6"/>
   <defs>
   <linearGradient id="paint0_linear_13_66" x1="1438.5" y1="3.86474" x2="3.5" y2="3.86467" gradientUnits="userSpaceOnUse">
   <stop stopColor="#343045"/>
@@ -56,7 +56,7 @@ export const FooterV19 = () => (
 
 export const FooterV20 = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="6" height="197" viewBox="0 0 6 197" fill="none">
-  <path d="M3 196.5V0.5" stroke="url(#paint0_linear_13_75)" stroke-width="6"/>
+  <path d="M3 196.5V0.5" stroke="url(#paint0_linear_13_75)" strokeWidth="6"/>
   <defs>
   <linearGradient id="paint0_linear_13_75" x1="2.99526" y1="1.42982" x2="77.322" y2="162.759" gradientUnits="userSpaceOnUse">
   <stop stopColor="#343045"/>
@@ -70,7 +70,7 @@ export const FooterV20 = () => (
 )
 export const FooterV21 = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="6" height="196" viewBox="0 0 6 196" fill="none">
-  <path d="M3 196V0" stroke="url(#paint0_linear_13_76)" stroke-width="6"/>
+  <path d="M3 196V0" stroke="url(#paint0_linear_13_76)" strokeWidth="6"/>
   <defs>
   <linearGradient id="paint0_linear_13_76" x1="2.99526" y1="0.929815" x2="77.322" y2="162.259" gradientUnits="userSpaceOnUse">
   <stop stopColor="#343045"/>
@@ -85,7 +85,7 @@ export const FooterV21 = () => (
 
 export const FooterV22 = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="6" height="196" viewBox="0 0 6 196" fill="none">
-  <path d="M3 196V0" stroke="url(#paint0_linear_13_77)" stroke-width="6"/>
+  <path d="M3 196V0" stroke="url(#paint0_linear_13_77)" strokeWidth="6"/>
   <defs>
   <linearGradient id="paint0_linear_13_77" x1="2.99526" y1="0.929815" x2="77.322" y2="162.259" gradientUnits="userSpaceOnUse">
   <stop stopColor="#343045"/>
