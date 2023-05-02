@@ -9,6 +9,7 @@ const TreserPlugin = require('terser-webpack-plugin');
 const isProd = process.env.NODE_ENV === 'production';
 
 module.exports = {
+  devtool: 'source-map',
   entry: './src/index.js',
   mode: 'development',
   output: {

@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Home.scss";
 
+import { homeContent } from "./homeContent";
 import { HomeV1, HomeV2, HomeV3, HomeV4 } from "./svg";
 import mainImage from "../../pages/Home/images/home-img.webp";
 import arrowRight from "../../pages/Home/images/home-arrow-small-right1.png"
@@ -20,16 +21,13 @@ const Home = () => {
         </div>
         <div className="home-page__description">
           <svg className="home-page_vector4"><HomeV4 /></svg>
-          <h1 className="home-page__title"><span className="home-page__title_accent1">Dive</span> Into The
-            Depths <br /> Of<span className="home-page__title_accent2"> Virtual Reality</span>
+          <h1 className="home-page__title"><span className="home-page__title_accent1">{homeContent.title.accent1}</span> {homeContent.title.main1} <br /> {homeContent.title.main2}<span className="home-page__title_accent2"> {homeContent.title.accent2}</span>
           </h1>
           <p className="home-page__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore nisl tincidunt eget.
-              Lectus mauris eros in vitae
+              {homeContent.description}
             </p>
           <NavLink to="/services" className="home-page__button">
-            Build your world
+            {homeContent.button}
           </NavLink>
           <img src={arrowRight} alt="arrow" className="home-page__arrow"></img>
         </div>

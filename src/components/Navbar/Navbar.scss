@@ -118,11 +118,11 @@
         position: relative;
        }
        .header-menu__link::after {
-        @include link-decoration_after();
+       display: none;
       }
 
       .header-menu__link:hover::after {
-        width: 130px;
+        display: none;
       }
 
       .header-menu__link__active {
@@ -136,12 +136,11 @@
         position: relative;
       }
       .header-menu__link__active::after {
-        @include link-decoration_after();
-        background-color: $activeColor;
+        display: none;
       }
 
       .header-menu__link__active:hover::after {
-       width: 130px;
+      display: none;
       }
     }
   }

@@ -7,6 +7,7 @@ import Slider from "../../components/Slider/Slider";
 import { sliderPages } from "../../components/Slider/sliderSettings";
 import { technologiesCards } from "../../components/TechnologiesCard/TechnologiesCardList";
 import TechnologiesCard from "../../components/TechnologiesCard/TechnologiesCard";
+import { technologiesContent } from "./technologiesContent";
 
 const Technologies = () => {
   const [showImage, setShowImage] = useState(false);
@@ -20,8 +21,8 @@ const Technologies = () => {
     <section className="tech-page">
       <div className="tech-page__main">
         <img src={techImg} alt="unreal" className="tech-page__main_img"></img>
-        <h1 className="tech-page__main_title">TECHNOLOGIES & HARDWARE</h1>
-        <h2 className="tech-page__main_subtitle">USED BY HYDRA VR</h2>
+        <h1 className="tech-page__main_title">{technologiesContent.title}</h1>
+        <h2 className="tech-page__main_subtitle">{technologiesContent.subtitle}</h2>
       </div>
       <div className="tech-page__dropdown-max" onClick={showImages}>
         <div className="tech-page__dropdown-min">

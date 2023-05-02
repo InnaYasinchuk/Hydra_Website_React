@@ -11,7 +11,7 @@ const contacts = [
     alt: 'location',
     title: 'Pay Us a Visit',
     description: 'Union St, Seattle, WA 98101, United States',
-    href: 'https://goo.gl/maps/opRnX14hEaqbhBWQ6',
+    href: 'https://goo.gl/maps/cjPRwGMVQafagckb8?coh=178572&entry=tt',
     target:'_blank',
     id: uuidv4(), 
   },

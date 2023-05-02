@@ -3,6 +3,7 @@ import "./HowTo.scss";
 import { HowToArrow, HowToLine, HowToV15 } from "./svg";
 import HowCard from "../../components/HowCard/HowCard";
 import { howCards } from "../../components/HowCard/howCardList";
+import { howToContent } from "./howToContent";
 
 import Slider from "../../components/Slider/Slider";
 import { sliderPages } from "../../components/Slider/sliderSettings";
@@ -21,15 +22,11 @@ const HowTo = () => {
           <svg className="howTo-page__arrow">
             <HowToArrow />
           </svg>
-          <h1 className="howTo-page__main_title">HOW WE BUILD</h1>
-          <h2 className="howTo-page__main_subtitle">WITH HYDRA VR?</h2>
+          <h1 className="howTo-page__main_title">{howToContent.title}</h1>
+          <h2 className="howTo-page__main_subtitle">{howToContent.subtitle}</h2>
         </div>
         <p className="howTo-page__main_description">
-          Vitae sapien pellentesque habitant morbi tristique senectus et netus
-          et. Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit
-          amet mauris commodo quis imperdiet massa tincidunt nunc. Viverra
-          aliquet eget sit amet tellus. Ornare lectus sit amet est placerat in.
-          Lectus magna fringilla urna porttitor rhoncus vitae
+          {howToContent.description}
         </p>
       </div>
       {isMobile ? (

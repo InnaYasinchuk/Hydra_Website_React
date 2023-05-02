@@ -8,7 +8,7 @@ export const ServicesLine = () => (
 
 export const ServicesArrow = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="46" height="38" viewBox="0 0 46 38" fill="none">
-  <path d="M43.8333 19L2.16667 19M43.8333 19L27.1667 35.6667M43.8333 19L27.1667 2.33337" stroke="#C0B7E8" strokeWidth="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M43.8333 19L2.16667 19M43.8333 19L27.1667 35.6667M43.8333 19L27.1667 2.33337" stroke="#C0B7E8" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 )
 

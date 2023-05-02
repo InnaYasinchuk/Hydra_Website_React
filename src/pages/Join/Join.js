@@ -5,6 +5,7 @@ import validateForm from "./formValidation.js";
 
 import "./Join.scss";
 import { JoinDesktop, JoinMobile } from "./svg";
+import { joinContent } from "./joinContent.js";
 
 const Join = () => {
   const isMobile = window.innerWidth <= 768;
@@ -24,7 +25,7 @@ useEffect(() => {
 
   const onSubmit = async (values, { resetForm }) => {
     try {
-      const response = await axios.post('http://localhost:4000/send-email', values);
+      const response = await axios.post('192.168.0.103/send-email', values);
        
       console.log(response.data);
       setIsFormSubmitted(true);
@@ -45,8 +46,8 @@ useEffect(() => {
           <JoinDesktop />
         </svg>
       )}
-      <h1 className="join__title">JOIN HYDRA</h1>
-      <h2 className="join__subtitle">Let's Build Your VR Experience</h2>
+      <h1 className="join__title">{joinContent.title}</h1>
+      <h2 className="join__subtitle">{joinContent.subtitle}</h2>
       <Formik
         initialValues={{
           firstName: "",
@@ -68,7 +69,6 @@ useEffect(() => {
               className={errors.firstName && touched.firstName ? "invalid" : "join__form__input"}
             />
             
-           
             <Field
               name="lastName"
               validate={validateForm().validateLastName}
@@ -100,14 +100,14 @@ useEffect(() => {
               className={errors.about && touched.about ? "invalid_area" : "join__form__input_area"}
             />
             <button type="submit" className="join__form__button">
-              SEND TO HYDRA
+              {joinContent.button}
             </button>
           </Form>
         )}
       </Formik>
       {isFormSubmitted && (
   <div className="join__success">
-    <p>Form successfully submitted!</p>
+    <p>{joinContent.submit}</p>
   </div>
 )}
     </section>

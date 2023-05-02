@@ -5,6 +5,7 @@ import { services } from "../../components/Service/ServiceList";
 import { ServicesArrow, ServicesLine } from "./svg";
 import Slider from "../../components/Slider/Slider";
 import { sliderPages } from "../../components/Slider/sliderSettings";
+import { servicesContent } from "./servicesContent";
 
 const Services = () => {
   const isMobile = window.innerWidth <= 768;
@@ -19,15 +20,11 @@ const Services = () => {
       </svg>
       <div className="services-page__main">
         <div className="services-page__main_titles">
-          <h1 className="services-page__main_title">WHY BUILD</h1>
-          <h2 className="services-page__main_subtitle">WITH HYDRA?</h2>
+          <h1 className="services-page__main_title">{servicesContent.title}</h1>
+          <h2 className="services-page__main_subtitle">{servicesContent.subtitle}</h2>
         </div>
         <p className="services-page__main_description">
-          Vitae sapien pellentesque habitant morbi tristique senectus et netus
-          et. Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit
-          amet mauris commodo quis imperdiet massa tincidunt nunc. Viverra
-          aliquet eget sit amet tellus. Ornare lectus sit amet est placerat in.
-          Lectus magna fringilla urna porttitor rhoncus vitae
+          {servicesContent.description}
         </p>
       </div>
       {isMobile ? (
