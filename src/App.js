@@ -14,8 +14,9 @@ import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
+    <BrowserRouter>
     <div className="App">
-      <BrowserRouter>
+      
         <Navbar />
 
         <Routes>
@@ -25,12 +26,14 @@ const App = () => {
           <Route path="/technologies" element={<Technologies />} />
           <Route path="/how_to" element={<HowTo />} />
           <Route path="/join" element={<Join />} />
+
+          <Route path='*' element={<h1>Page not Found</h1>} />
         </Routes>
 
       <Footer /> 
-      </BrowserRouter>
-    
+      
     </div>
+    </BrowserRouter>
   );
 };
 

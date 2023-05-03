@@ -5,7 +5,7 @@ const validateForm = () => {
       return "Enter your name";
     } else if (
       value.trim() === "" ||
-      !/^[a-zA-Zа-яА-Я]+$/.test(value) ||
+      !/^[a-zA-Zа-яА-Я]*$/.test(value)  ||
       value.length < 2
     ) {
       return "Enter correct name";
@@ -17,7 +17,7 @@ const validateForm = () => {
       return "Enter your Last name";
     } else if (
       value.trim() === "" ||
-      !/^[a-zA-Zа-яА-Я]+$/.test(value) ||
+      !/^[a-zA-Zа-яА-Я]*$/.test(value) ||
       value.length < 2
     ) {
       return "Enter correct Last name";
