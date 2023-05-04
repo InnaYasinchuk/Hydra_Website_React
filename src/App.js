@@ -12,8 +12,7 @@ import Layout from "./pages/Layout/Layout";
 
 const App = () => {
 	return (
-		<div className="App">
-			<Routes>
+		<Routes>
 				<Route path='/' element={<Layout/>}>
 					<Route path="" element={<Home/>}/>
 					<Route path="/about" element={<About/>}/>
@@ -23,8 +22,7 @@ const App = () => {
 					<Route path="/join" element={<Join/>}/>
 					<Route path='*' element={<h1>Page not Found</h1>}/>
 				</Route>
-			</Routes>
-		</div>
+		</Routes>
 	)
 		;
 };
