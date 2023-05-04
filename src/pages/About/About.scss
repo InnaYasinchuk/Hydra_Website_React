@@ -8,6 +8,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  
   @include desktop {
     max-width: 1272px;
     min-height: 756px;

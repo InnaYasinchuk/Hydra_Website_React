@@ -36,7 +36,8 @@
   position: relative;
   z-index: 50;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out;
+ transition: background-color 0.5s ease-in-out;
+ 
 }
 
 @mixin buttonHover() {
@@ -44,6 +45,7 @@
   padding: 16px 0px;
   color: $mainColor;
   background: #302c42;
+  transition: background-color 0.5s ease-in-out;
 }
 
 @mixin title($f-size) {
