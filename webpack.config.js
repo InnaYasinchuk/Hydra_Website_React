@@ -14,7 +14,7 @@ module.exports = {
   mode: 'development',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[hash].js',
+    filename: '[name].[fullhash].js',
   },
   devServer: {
     watchFiles: path.resolve(__dirname, 'src'),
@@ -23,12 +23,12 @@ module.exports = {
   },
   plugins: [
     new HTMLWebpackPlugin({
-      template: './public/index.html',
+      template: './index.html',
       favicon: './public/favicon.ico',
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: '[name].[hash].css',
+      filename: '[name].[fullhash].css',
     }),
    
   ],

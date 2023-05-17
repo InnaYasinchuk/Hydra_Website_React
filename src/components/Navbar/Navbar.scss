@@ -125,13 +125,7 @@
         color: $mainColor;
         position: relative;
        }
-      //  .header-menu__link::after {
-      //  display: none;
-      // }
-
-      // .header-menu__link:hover::after {
-      //   display: none;
-      // }
+      
 
       .header-menu__link__active {
         display: block;
@@ -143,14 +137,7 @@
         text-decoration: none;
         position: relative;
       }
-      // .header-menu__link__active::after {
-      //   display: none;
-      // }
-
-      // .header-menu__link__active:hover::after {
-      // display: none;
-      // }
-    }
+     }
   }
 
   .navbar-button {

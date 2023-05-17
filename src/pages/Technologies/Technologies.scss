@@ -16,7 +16,7 @@
     position: relative;
     max-width: 348px;
     min-height: 163px;
-    @include desktop{
+       @include desktop{
       max-width: 1278px;
     }
      
